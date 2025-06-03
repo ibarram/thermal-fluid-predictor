@@ -12,10 +12,10 @@
     <img src="/doc/img/escudo-png.png" alt="Logo" width="120" height="120">
   </a>
 
-  <h3 align="center">ITSC-dataset</h3>
+  <h3 align="center">thermal-fluid-predictor</h3>
 
   <p align="center">
-    Experimental dataset for classifying four levels of inter-turn short-circuit per phase in an induction motor
+    Experimental dataset and multi-language implementation for real-time fluid temperature prediction in gas-based water heaters using embedded systems.
     <br />
     <a href="https://github.com/ibarram/thermal-fluid-predictor"><strong>Explore the docs »</strong></a>
     <br />
