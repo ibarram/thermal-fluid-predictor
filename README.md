@@ -76,7 +76,7 @@ Each process includes three stages (Heating, Steady, and Cooling). After definin
 
 The dataset was acquired in the Laboratory of Electrical Engineering, Division of Engineering at Irapuato-Salamanca Campus of the University of Guanajuato, Mexico.
 
-The testbench consists of a Rapid Recovery Water Heater System that operates with LP gas, a Calorex COXDP-09 13 Lt/min, with a power supply of 2 batteries of 3V, one servo valve for control of LP gas supply.
+The testbench consists of a Rapid Recovery Water Heater System that operates with LP gas, a Calorex COXDP-09 model of 13 Lt/min, with a power supply of 2 batteries of 3V, one servo valve for control of LP gas supply.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
