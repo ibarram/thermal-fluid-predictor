@@ -62,12 +62,14 @@ The dataset contains measurements of five variables obtained from the Rapid Reco
 
 Each process has a total sampling duration of 12 minutes, divided into three distinct phases:
 A. From 0 to 4 minutes, the water is heated (Heating).
+
 B. From 4 to 8 minutes, the water temperatura is maintained and must not exceed a defined setpoint (Steady).
+
 C. From 8 to 12 minutes, the system begins to cool down (Cooling).
 
 Samples are recorded every 200 ms, which means that in each 4-minute phase we have 1,200 samples.
 
-Each process includes three stages (Heating, Steady, and Cooling). After defining the stages, a water flow level is assigned(Zero, Low, or High); followed by a gas flow setting, (Zero, Low, or High). Finally, each process is carried out with two different initial water temperatures (Low and High). Therefore, the total number of data files is calculated as: 3 (Water flow levels) Ö 4 (Gas Flow levels) Ö 10 (Water processes) Ö 2 (Initial temperatures) = 240 files.
+Each process includes three stages (Heating, Steady, and Cooling). After defining the stages, a water flow level is assigned(Zero, Low, or High); followed by a gas flow setting, (Zero, Low, or High). Finally, each process is carried out with two different initial water temperatures (Low and High). Therefore, the total number of data files is calculated as: 3 (Water flow levels) x 4 (Gas Flow levels) x 10 (Water processes) x 2 (Inlet temperatures) = 240 files.
 
 ## Testbench
 
