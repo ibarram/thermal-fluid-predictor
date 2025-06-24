@@ -64,5 +64,5 @@ The dataset was acquired in the Laboratory of Electrical Engineering, Division o
 
 The testbench consists of a Rapid Recovery Water Heater System that operates with LP gas, a Calorex COXDP-09 13 Lt/min, with a power supply of 2 batteries of 3V, one servo valve for control of LP gas supply.
 
-<img src="https://github.com/ibarram/thermal-fluid-predictor/blob/81391a401e9ec465b0c65120dc74dcbec4f95cb3/doc/img/testbench_leftview.png" width="200" height="200" />
+<img src="https://github.com/ibarram/thermal-fluid-predictor/blob/81391a401e9ec465b0c65120dc74dcbec4f95cb3/doc/img/testbench_leftview.png" width="200" height="400" />
 Figure 1. Left View of the testbench.
