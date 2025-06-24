@@ -61,6 +61,7 @@ Thermal Fluid Predictor is a cross-platform project for modeling and predicting 
 The dataset contains measurements of five variables obtained from the Rapid Recovery Water Heater. The sampling methodology is based on the “water state process.”
 
 Each process has a total sampling duration of 12 minutes, divided into three distinct phases:
+
 A. From 0 to 4 minutes, the water is heated (Heating).
 
 B. From 4 to 8 minutes, the water temperatura is maintained and must not exceed a defined setpoint (Steady).
