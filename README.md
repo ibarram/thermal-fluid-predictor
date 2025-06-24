@@ -66,7 +66,7 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/testbench_fullview.png" alt="testbenchfullview1" width="200" height="400">
+    <img src="/doc/img/testbench_fullview.png" alt="testbenchfullview1" width="800" height="600">
   </a>
 
 
