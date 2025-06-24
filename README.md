@@ -70,4 +70,4 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
   </a>
 
 
-Figure 1. Left View of the testbench.
+Figure 1. Above is a photograph of the test bench used to generate the database. This setup provides a visual representation of our data collection process. Left View of System | Front View of System | Right View of System.
