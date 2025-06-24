@@ -58,6 +58,17 @@
 
 Thermal Fluid Predictor is a cross-platform project for modeling and predicting fluid temperature behavior in real-time. The repository includes implementations in Python, MATLAB, C, and R, tailored for integration into energy-constrained embedded systems such as gas water heaters. It provides curated datasets, trained models, and system diagrams to support reproducible development, simulation, and deployment.
 
+The dataset contains measurements of five variables obtained from the Rapid Recovery Water Heater. The sampling methodology is based on the “water state process.”
+
+Each process has a total sampling duration of 12 minutes, divided into three distinct phases:
+A. From 0 to 4 minutes, the water is heated (Heating).
+B. From 4 to 8 minutes, the water temperatura is maintained and must not exceed a defined setpoint (Steady).
+C. From 8 to 12 minutes, the system begins to cool down (Cooling).
+
+Samples are recorded every 200 ms, which means that in each 4-minute phase we have 1,200 samples.
+
+Each process includes three stages (Heating, Steady, and Cooling). After defining the stages, a water flow level is assigned(Zero, Low, or High); followed by a gas flow setting, (Zero, Low, or High). Finally, each process is carried out with two different initial water temperatures (Low and High). Therefore, the total number of data files is calculated as: 3 (Water flow levels) Ö 4 (Gas Flow levels) Ö 10 (Water processes) Ö 2 (Initial temperatures) = 240 files.
+
 ## Testbench
 
 The dataset was acquired in the Laboratory of Electrical Engineering, Division of Engineering at Irapuato-Salamanca Campus of the University of Guanajuato, Mexico.
@@ -70,4 +81,4 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
   </a>
 
 
-Figure 1. Above is a photograph of the test bench used to generate the database. This setup provides a visual representation of our data collection process. Left View of System | Front View of System | Right View of System.
+Figure 1. Above is a photograph of the test bench part 1 used to generate the database. This setup provides a visual representation of our data collection process. Left View of System | Front View of System | Right View of System.
