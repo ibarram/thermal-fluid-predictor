@@ -72,6 +72,7 @@ The construction of the data files was based on the following table of the Figur
   </a>
   
 Figure 1. Table of combinations for samples.
+</div>
 
 Therefore, the total number of data files is 12 unique files. But we have repetitions files to generate more dataset information, 10 files per process.
 
