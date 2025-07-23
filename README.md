@@ -60,17 +60,20 @@ Thermal Fluid Predictor is a cross-platform project for modeling and predicting 
 
 The dataset contains measurements of five variables obtained from the Rapid Recovery Water Heater. The sampling methodology is based on the “water state process.”
 
-Each process has a total sampling duration of 12 minutes, divided into three distinct phases:
-
-A. From 0 to 4 minutes, the water is heated (Heating).
-
-B. From 4 to 8 minutes, the water temperatura is maintained and must not exceed a defined setpoint (Steady).
-
-C. From 8 to 12 minutes, the system begins to cool down (Cooling).
+Each process has a total sampling duration of 4 minutes.
 
 Samples are recorded every 200 ms, which means that in each 4-minute phase we have 1,200 samples.
 
-Each process includes three stages (Heating, Steady, and Cooling). After defining the stages, a water flow level is assigned(Zero, Low, or High); followed by a gas flow setting, (Zero, Low, or High). Finally, each process is carried out with two different initial water temperatures (Low and High). Therefore, the total number of data files is calculated as: 3 (Water flow levels) x 4 (Gas Flow levels) x 10 (Water processes) x 2 (Inlet temperatures) = 240 files.
+The construction of the data files was based on the following table of the Figure 1, which includes 12 unique, non-repeating combinations.
+
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/tableCombinationsGithub.png" alt="tablecombinations" width="800" height="400">
+  </a>
+  
+Figure 1. Table of combinations for samples.
+
+Therefore, the total number of data files is 12 unique files. But we have repetitions files to generate more dataset information, 10 files per process.
 
 ## Testbench
 
@@ -83,5 +86,4 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
     <img src="/doc/img/testbench_fullview.png" alt="testbenchfullview1" width="800" height="400">
   </a>
 
-
-Figure 1. Above is a photograph of the test bench part 1 used to generate the database. This setup provides a visual representation of our data collection process. Left View of System | Front View of System | Right View of System.
+Figure 2. Above is a photograph of the test bench part 1 used to generate the database. This setup provides a visual representation of our data collection process. Left View of System | Front View of System | Right View of System.
