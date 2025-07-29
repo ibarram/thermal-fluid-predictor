@@ -102,8 +102,89 @@ As initially shown in Figure 3, the first part of the filename indicates the fil
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Interface2_last.png" alt="Interface2_last" width="300" height="300">
+    <img src="/doc/img/Interface2_last.png" alt="Interface2_last" width="400" height="400">
   </a>
 
 **Figure 3.** *Obtain Combination number and Repetition number.*
 </div>
+
+In the second step, as shown in Figure 4, the "water process" is assigned (**S“W”**):
+
+- Water is being heated (**SH – State Heating**).
+- Water temperature is being maintained at a set point (**SS – State Steady**).
+- Water is being cooled down (**SC – State Cooling**).
+
+For each case, the sampling duration is 4 minutes, with one sample taken every second—resulting in a sampling frequency of 4.16 mHz, and a total of 1200 samples per full cycle.
+
+In the first case (SH), water is actively heated, so both the LP gas output and the ignition spark are activated to produce a flame.
+In the second case (SS), a SET temperature is defined and a basic control method is applied, which simply turns the gas source on and off to maintain a relatively stable (though not precisely controlled) temperature, only for experimental purposes.
+In the final case (SC), the system enters the cooling phase, where both the LP gas output and ignition spark are turned off so that the flame is no longer produced.
+
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/Interface3_last.png" alt="Interface3_last" width="400" height="400">
+  </a>
+
+**Figure 4.** *Obtain Water Temperature State*
+</div>
+
+In the third step, shown in Figure 5, the water flow rate circulating through the pipe is assigned (**F“Y”**).
+This variable does not have a fixed value—it entirely depends on the water consumption or demand from the user. Therefore, only estimated values were defined by our research team:
+
+- Water Flow "Zero" (**FZ**): Flow rate should be zero, meaning the outlet valve of the water heater is completely closed, while the inlet valve remains open.
+- Water Flow "Low" (**FL**): Flow rate is between 4–6 (Lt/min). Both the inlet and outlet valves are open. For this experiment, the outlet valve was set at a halfway position.
+- Water Flow "High" (**FH**): Flow rate is between 12–15 (Lt/min). Both the inlet and outlet valves are open. For this experiment, the outlet valve was fully opened.
+
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/Interface4_last.png" alt="Interface4_last" width="400" height="400">
+  </a>
+
+**Figure 5.** *Obtain Water Flow.*
+</div>
+
+In the final step, shown in Figure 6, the output value for the LP gas valve opening is assigned (G“V”).
+This variable is not measured in terms of pressure, but rather by the amount of electrical current supplied to the solenoid valve to control its opening. This behavior is illustrated in Figure 7, which shows the functional characteristic curve. The valve operation is defined as follows:
+
+- Gas Flow "Zero" (**GZ**): Applied current = 0 mA; the valve remains fully closed.
+- Gas Flow "Low" (**GL**): Applied current = 10 mA; the valve opens to a minimal position.
+- Gas Flow "High" (**GH**): Applied current = 25 mA; the valve opens to its maximum position. Applying more current does not produce further changes.
+
+- <div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/Interface5_last.png" alt="Interface5_last" width="400" height="400">
+  </a>
+
+**Figure 6.** *Obtain Gas Flow.*
+</div>
+
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/GraphGas.png" alt="GraphGas" width="300" height="300">
+  </a>
+
+**Figure 7.** *Electrovalve Characteristics.*
+</div>
+
+Now, let’s use an example to generate a file. We will need to assign the following parameters using the table in Figure 1 as a reference:
+
+C01_R01: This is the first sample and our first repetition.
+SH: The water will begin heating, so we select the Heating option.
+FZ: The water flow will be zero for our first case; therefore, the outlet valve will remain closed, and we set the flow to Zero in the interface.
+GL: The LP gas flow will be low, so we select the Low option in the interface.
+
+The final file name will be: **C01_R01_SH_FZ_GL**
+
+***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in Figure 8, some elements in the “Gas Flow” section—such as the Zero condition—are crossed out. This is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
+
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/Diagram1Combination2.png" alt="Diagram1Combination2" width="300" height="300">
+  </a>
+
+**Figure 8.** *Example, how to select variables for each file part.*
+</div>
+
+This way, we generate the 12 key files for our process, with each file containing 1,200 samples. So, we end up with 12 CSV files sized [1200 x 5] each, which totals [12 x 1200 x 5] data points. Since we create 10 repetitions of each file, that means we have 120 CSV files in total. Combining that with the number of samples per file, we get a grand total of [12 x 10 x 1200 x 5] = 144,000 rows of data across all variables.
+
+
