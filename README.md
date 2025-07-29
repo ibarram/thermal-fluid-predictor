@@ -71,7 +71,7 @@ The construction of the data files was based on the following table of the Figur
     <img src="/doc/img/tableCombinationsGithub.png" alt="tablecombinations" width="400" height="200">
   </a>
   
-Figure 1. Table of combinations for samples.
+**Figure 1.** *Table of combinations for samples.*
 </div>
 
 Therefore, the total number of data files is 12 unique files. But we have repetitions files to generate more dataset information, 10 files per process, resulting in a total of 120 files.
@@ -87,7 +87,7 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
     <img src="/doc/img/testbench_fullview.png" alt="testbenchfullview1" width="800" height="400">
   </a>
 
-Figure 2. Above is a photograph of the test bench part 1 used to generate the database. This setup provides a visual representation of our data collection process. Left View of System | Front View of System | Right View of System.
+**Figure 2.** *Above is a photograph of the test bench part 1 used to generate the database. This setup provides a visual representation of our data collection process. Left View of System | Front View of System | Right View of System.*
 </div>
 
 The electrical signals from the sensors mounted on the heating system are processed using two devices. The first is the STM32L476RGT6 microcontroller, integrated on a Nucleo Board, which receives signals from two temperature sensors (NTC Thermistor 3950 MF52 100K ohm 1%) to measure voltage variations caused by changes in the sensor’s resistance when exposed to temperature. Each of these two sensors is externally mounted on the inlet and outlet water pipes, respectively.
@@ -96,6 +96,14 @@ It also collects water flow data using a Hall-effect sensor (YF-B1 flow sensor),
 
 The second device is the NI USB-TC01 module, which enables the measurement of the outlet temperature using a precision Type K thermocouple probe.
 
-As mentioned earlier, the data acquisition is structured based on the "water process" concept to generate the corresponding files. The naming convention for the files follows this structure: C“XX”_R“ZZ”_S“W”_F“Y”_G“V”, which will be explained in detail in each of the following images.
+As mentioned earlier, the data acquisition is structured based on the "water process" concept to generate the corresponding files. The naming convention for the files follows this structure: **C“XX”_R“ZZ”_S“W”_F“Y”_G“V”**, which will be explained in detail in each of the following images.
 
+As initially shown in Figure 3, the first part of the filename indicates the file number and its repetition (**C“XX”_R“ZZ”**). In total, there are 12 unique files, each of which was replicated 10 times for this dataset. However, additional repetitions can be generated if needed.
 
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/testbench_fullview.png" alt="Interface2_last" width="800" height="400">
+  </a>
+
+**Figure 3.** *Obtain Combination number and Repetition number.*
+</div>
