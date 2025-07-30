@@ -68,7 +68,7 @@ The construction of the data files was based on the following table of the Figur
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/tableCombinationsGithub.png" alt="tablecombinations" width="400" height="200">
+    <img src="/doc/img/tableCombinationsGithub.png" alt="tablecombinations" width="600" height="300">
   </a>
   
 **Figure 1.** *Table of combinations for samples.*
@@ -84,7 +84,7 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/testbench_fullview.png" alt="testbenchfullview1" width="900" height="500">
+    <img src="/doc/img/testbench_fullview.png" alt="testbenchfullview1" width="800" height="400">
   </a>
 
 **Figure 2.** *Above is a photograph of the test bench part 1 used to generate the database. This setup provides a visual representation of our data collection process. Left View of System | Front View of System | Right View of System.*
