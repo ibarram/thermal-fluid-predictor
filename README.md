@@ -68,7 +68,7 @@ The construction of the data files was based on the following table of the Figur
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/tableCombinationsGithub.png" alt="tablecombinations" width="600" height="300">
+    <img src="/doc/img/Examplefile.png" alt="Examplefile" width="600" height="300">
   </a>
   
 **Figure 1.** *Table of combinations for samples.*
