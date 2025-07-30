@@ -122,7 +122,7 @@ In the final case (SC), the system enters the cooling phase, where both the LP g
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Interface3_last.png" alt="Interface3_last" width="400" height="400">
+    <img src="/doc/img/Interface3_last.png" alt="Interface3_last" width="600" height="600">
   </a>
 
 **Figure 4.** *Obtain Water Temperature State*
@@ -137,7 +137,7 @@ This variable does not have a fixed value—it entirely depends on the water con
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Interface4_last.png" alt="Interface4_last" width="400" height="400">
+    <img src="/doc/img/Interface4_last.png" alt="Interface4_last" width="600" height="600">
   </a>
 
 **Figure 5.** *Obtain Water Flow.*
@@ -160,7 +160,7 @@ This variable is not measured in terms of pressure, but rather by the amount of 
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/GraphGas.png" alt="GraphGas" width="300" height="300">
+    <img src="/doc/img/GraphGas.png" alt="GraphGas" width="500" height="500">
   </a>
 
 **Figure 7.** *Electrovalve Characteristics.*
@@ -179,7 +179,7 @@ The final file name will be: **C01_R01_SH_FZ_GL**
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Diagram1Combination2.png" alt="Diagram1Combination2" width="300" height="300">
+    <img src="/doc/img/Diagram1Combination2.png" alt="Diagram1Combination2" width="500" height="500">
   </a>
 
 **Figure 8.** *Example, how to select variables for each file part.*
