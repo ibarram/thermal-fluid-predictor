@@ -150,9 +150,9 @@ This variable is not measured in terms of pressure, but rather by the amount of 
 - Gas Flow "Low" (**GL**): Applied current = 10 mA; the valve opens to a minimal position.
 - Gas Flow "High" (**GH**): Applied current = 25 mA; the valve opens to its maximum position. Applying more current does not produce further changes.
 
-- <div align="center">
+<div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Interface5_last.png" alt="Interface5_last" width="400" height="400">
+    <img src="/doc/img/Interface5_last.png" alt="Interface5_last" width="600" height="600">
   </a>
 
 **Figure 6.** *Obtain Gas Flow.*
@@ -179,7 +179,7 @@ The final file name will be: **C01_R01_SH_FZ_GL**
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Diagram1Combination2.png" alt="Diagram1Combination2" width="500" height="500">
+    <img src="/doc/img/Diagram1Combination2.png" alt="Diagram1Combination2" width="600" height="600">
   </a>
 
 **Figure 8.** *Example, how to select variables for each file part.*
