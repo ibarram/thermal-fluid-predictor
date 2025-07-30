@@ -102,7 +102,7 @@ As initially shown in Figure 3, the first part of the filename indicates the fil
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Interface2_last.png" alt="Interface2_last" width="400" height="400">
+    <img src="/doc/img/Interface2_last.png" alt="Interface2_last" width="600" height="600">
   </a>
 
 **Figure 3.** *Obtain Combination number and Repetition number.*
