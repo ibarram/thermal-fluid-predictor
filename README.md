@@ -195,3 +195,8 @@ You can use direct links to download the dataset. The data is stored in the csv 
 |Name|Description|Samples|Size|Link|MD5 Checksum|
 |:-|:-|:-|:-|:-|:-|
 | `Dataset_CXX_RZZ_SW_FY_GV.rar` | Raw data in CSV format | [144,000x5] | 6.5 MBytes | [Download](Dataset/Dataset_CXX_RZZ_SW_FY_GV.rar) | temp |
+
+
+![grafica_scroll_con_ejes](https://github.com/user-attachments/assets/a4399421-02a9-4af2-a91d-792565f0046f)
+
+
