@@ -206,21 +206,11 @@ You can use direct links to download the dataset. The data is stored in the csv 
     <img src="/doc/img/SteadySampleGif.gif" alt="Steady" width="400" height="400">
   </a>
 
-**Figure 9.** *Sample of Heating Water.*
-</div>
-
-<div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/SteadySampleGif.gif" alt="test" width="400" height="400">
+    <img src="/doc/img/CoolingSampleGif.gif" alt="Cooling" width="400" height="400">
   </a>
 
-**Figure 10.** *Sample of Steady Water.*
+**Figure 9.** *Samples of Heating Water | Steady Water | Cooling Water.*
 </div>
 
-<div align="center">
-  <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/CoolingSampleGif.gif" alt="test" width="400" height="400">
-  </a>
 
-**Figure 11.** *Sample of Cooling Water.*
-</div>
