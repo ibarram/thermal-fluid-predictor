@@ -87,7 +87,7 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
     <img src="/doc/img/testbench_fullview.png" alt="testbenchfullview1" width="800" height="400">
   </a>
 
-**Figure 2.** *Above is a photograph of the test bench part 1 used to generate the database. This setup provides a visual representation of our data collection process. Left View of System | Front View of System | Right View of System.*
+**Figure 2.** *Above is a photograph of the test bench part 1 used to generate the database. This setup provides a visual representation of our data collection process. **Left View of System** | **Front View of System** | **Right View of System**.*
 </div>
 
 The electrical signals from the sensors mounted on the heating system are processed using two devices. The first is the STM32L476RGT6 microcontroller, integrated on a Nucleo Board, which receives signals from two temperature sensors (NTC Thermistor 3950 MF52 100K ohm 1%) to measure voltage variations caused by changes in the sensor’s resistance when exposed to temperature. Each of these two sensors is externally mounted on the inlet and outlet water pipes, respectively.
@@ -203,4 +203,20 @@ You can use direct links to download the dataset. The data is stored in the csv 
   </a>
 
 **Figure 9.** *Sample of Heating Water.*
+</div>
+
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/SteadySampleGif.gif" alt="test" width="400" height="400">
+  </a>
+
+**Figure 10.** *Sample of Steady Water.*
+</div>
+
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/CoolingSampleGif.gif" alt="test" width="400" height="400">
+  </a>
+
+**Figure 11.** *Sample of Cooling Water.*
 </div>
