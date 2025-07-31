@@ -199,15 +199,15 @@ You can use direct links to download the dataset. The data is stored in the csv 
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/HeatingSampleGif.gif" alt="Heating" width="400" height="400">
+    <img src="/doc/img/HeatingSampleGif.gif" alt="Heating" width="300" height="400">
   </a>
 
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/SteadySampleGif.gif" alt="Steady" width="400" height="400">
+    <img src="/doc/img/SteadySampleGif.gif" alt="Steady" width="300" height="400">
   </a>
 
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/CoolingSampleGif.gif" alt="Cooling" width="400" height="400">
+    <img src="/doc/img/CoolingSampleGif.gif" alt="Cooling" width="300" height="400">
   </a>
 
 **Figure 9.** *Samples of Heating Water | Steady Water | Cooling Water.*
