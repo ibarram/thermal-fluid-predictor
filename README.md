@@ -58,11 +58,11 @@
 
 Thermal Fluid Predictor is a cross-platform project for modeling and predicting fluid temperature behavior in real-time. The repository includes implementations in Python, MATLAB, C, and R, tailored for integration into energy-constrained embedded systems such as gas water heaters. It provides curated datasets, trained models, and system diagrams to support reproducible development, simulation, and deployment.
 
-The dataset contains measurements of five variables obtained from the Rapid Recovery Water Heater. The sampling methodology is based on the “water state process.”
+The dataset contains measurements of five variables obtained from the Rapid Recovery Water Heater. The sampling methodology is based on the **“water state process.”**
 
 Each process has a total sampling duration of 4 minutes.
 
-Samples are recorded every 200 ms, which means that in each 4-minute phase we have 1,200 samples.
+Samples are recorded every 200 *ms*, which means that in each 4-minute phase we have 1,200 samples.
 
 The construction of the data files was based on the following table of the Figure 1, which includes 12 unique, non-repeating combinations.
 
@@ -87,7 +87,7 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
     <img src="/doc/img/testbench_fullview.png" alt="testbenchfullview1" width="800" height="400">
   </a>
 
-**Figure 2.** *Above is a photograph of the test bench part 1 used to generate the database. This setup provides a visual representation of our data collection process. **Left View of System** | **Front View of System** | **Right View of System**.*
+**Figure 2.** *Above is a photograph of the test bench used to generate the database. This setup provides a visual representation of our data collection process. **Left View of System** | **Front View of System** | **Right View of System**.*
 </div>
 
 The electrical signals from the sensors mounted on the heating system are processed using two devices. The first is the STM32L476RGT6 microcontroller, integrated on a Nucleo Board, which receives signals from two temperature sensors (NTC Thermistor 3950 MF52 100K ohm 1%) to measure voltage variations caused by changes in the sensor’s resistance when exposed to temperature. Each of these two sensors is externally mounted on the inlet and outlet water pipes, respectively.
@@ -98,7 +98,7 @@ The second device is the NI USB-TC01 module, which enables the measurement of th
 
 As mentioned earlier, the data acquisition is structured based on the "water process" concept to generate the corresponding files. The naming convention for the files follows this structure: **C“XX”_R“ZZ”_S“W”_F“Y”_G“V”**, which will be explained in detail in each of the following images.
 
-As initially shown in Figure 3, the first part of the filename indicates the file number and its repetition (**C“XX”_R“ZZ”**). In total, there are 12 unique files, each of which was replicated 10 times for this dataset. However, additional repetitions can be generated if needed.
+As initially shown in `Figure 3`, the first part of the filename indicates the file number and its repetition (**C“XX”_R“ZZ”**). In total, there are 12 unique files, each of which was replicated 10 times for this dataset. However, additional repetitions can be generated if needed.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -108,13 +108,13 @@ As initially shown in Figure 3, the first part of the filename indicates the fil
 **Figure 3.** *Obtain Combination number and Repetition number.*
 </div>
 
-In the second step, as shown in Figure 4, the "water process" is assigned (**S“W”**):
+In the second step, as shown in `Figure 4`, the "water process" is assigned (**S“W”**):
 
 - Water is being heated (**SH – State Heating**).
 - Water temperature is being maintained at a set point (**SS – State Steady**).
 - Water is being cooled down (**SC – State Cooling**).
 
-For each case, the sampling duration is 4 minutes, with one sample taken every second—resulting in a sampling frequency of 4.16 mHz, and a total of 1200 samples per full cycle.
+For each case, the sampling duration is 4 minutes, with one sample taken every second—resulting in a sampling frequency of 4.16 *mHz*, and a total of 1200 samples per full cycle.
 
 In the first case (SH), water is actively heated, so both the LP gas output and the ignition spark are activated to produce a flame.
 In the second case (SS), a SET temperature is defined and a basic control method is applied, which simply turns the gas source on and off to maintain a relatively stable (though not precisely controlled) temperature, only for experimental purposes.
@@ -128,12 +128,12 @@ In the final case (SC), the system enters the cooling phase, where both the LP g
 **Figure 4.** *Obtain Water Temperature State*
 </div>
 
-In the third step, shown in Figure 5, the water flow rate circulating through the pipe is assigned (**F“Y”**).
+In the third step, shown in `Figure 5`, the water flow rate circulating through the pipe is assigned (**F“Y”**).
 This variable does not have a fixed value—it entirely depends on the water consumption or demand from the user. Therefore, only estimated values were defined by our research team:
 
 - Water Flow "Zero" (**FZ**): Flow rate should be zero, meaning the outlet valve of the water heater is completely closed, while the inlet valve remains open.
-- Water Flow "Low" (**FL**): Flow rate is between 4–6 (Lt/min). Both the inlet and outlet valves are open. For this experiment, the outlet valve was set at a halfway position.
-- Water Flow "High" (**FH**): Flow rate is between 12–15 (Lt/min). Both the inlet and outlet valves are open. For this experiment, the outlet valve was fully opened.
+- Water Flow "Low" (**FL**): Flow rate is between 4–6 *Lt/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was set at a halfway position.
+- Water Flow "High" (**FH**): Flow rate is between 12–15 *Lt/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was fully opened.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -143,12 +143,12 @@ This variable does not have a fixed value—it entirely depends on the water con
 **Figure 5.** *Obtain Water Flow.*
 </div>
 
-In the final step, shown in Figure 6, the output value for the LP gas valve opening is assigned (G“V”).
+In the final step, shown in `Figure 6`, the output value for the LP gas valve opening is assigned (G“V”).
 This variable is not measured in terms of pressure, but rather by the amount of electrical current supplied to the solenoid valve to control its opening. This behavior is illustrated in Figure 7, which shows the functional characteristic curve. The valve operation is defined as follows:
 
-- Gas Flow "Zero" (**GZ**): Applied current = 0 mA; the valve remains fully closed.
-- Gas Flow "Low" (**GL**): Applied current = 10 mA; the valve opens to a minimal position.
-- Gas Flow "High" (**GH**): Applied current = 25 mA; the valve opens to its maximum position. Applying more current does not produce further changes.
+- Gas Flow "Zero" (**GZ**): Applied current = 0 *mA*; the valve remains fully closed.
+- Gas Flow "Low" (**GL**): Applied current = 10 *mA*; the valve opens to a minimal position.
+- Gas Flow "High" (**GH**): Applied current = 25 *mA*; the valve opens to its maximum position. Applying more current does not produce further changes.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -167,16 +167,16 @@ This variable is not measured in terms of pressure, but rather by the amount of 
 **Figure 7.** *Electrovalve Characteristics.*
 </div>
 
-Now, let’s use an example to generate a file. We will need to assign the following parameters using the table in Figure 1 as a reference:
+Now, let’s use an example to generate a file. We will need to assign the following parameters using the table in `Figure 1` as a reference:
 
-C01_R01: This is the first sample and our first repetition.
-SH: The water will begin heating, so we select the Heating option.
-FZ: The water flow will be zero for our first case; therefore, the outlet valve will remain closed, and we set the flow to Zero in the interface.
-GL: The LP gas flow will be low, so we select the Low option in the interface.
+-C01_R01: This is the first sample and our first repetition.
+-SH: The water will begin heating, so we select the Heating option.
+-FZ: The water flow will be zero for our first case; therefore, the outlet valve will remain closed, and we set the flow to Zero in the interface.
+-GL: The LP gas flow will be low, so we select the Low option in the interface.
 
 The final file name will be: **C01_R01_SH_FZ_GL**
 
-***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in Figure 8, some elements in the “Gas Flow” section—such as the Zero condition—are crossed out. This is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
+***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 8`, some elements in the “Gas Flow” section—such as the Zero condition—are crossed out. This is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -186,7 +186,7 @@ The final file name will be: **C01_R01_SH_FZ_GL**
 **Figure 8.** *Example, how to select variables for each file part.*
 </div>
 
-In this way, the 12 essential files of our process will be generated. Each file contains a total of 1,200 samples. That is, we will have 12 .csv files, each with dimensions [1200x5], giving us a total of [12x1200x5]. If we consider that 10 repetitions are generated for each file, we will have [12x10] .csv files. Combining this with the number of samples per file results in [12x10x1200x5] = [144,000x5] total samples.
+In this way, the 12 essential files of our process will be generated. Each file contains a total of 1,200 samples. That is, we will have 12 "*.csv*" files, each with dimensions [1200x5], giving us a total of [12x1200x5]. If we consider that 10 repetitions are generated for each file, we will have [12x10] .csv files. Combining this with the number of samples per file results in [12x10x1200x5] = [144,000x5] total samples.
 
 ## Get the Data
 
@@ -218,6 +218,14 @@ You can use direct links to download the dataset. The data is stored in the csv 
 **Figure 9.** *Samples of Heating Water | Steady Water | Cooling Water.*
 </div>
 
+## Implementations
 
 ## Benchmark
 
+## Publications
+
+## Contact
+
+## Citing thermal-fluid-predictor database
+
+## License
