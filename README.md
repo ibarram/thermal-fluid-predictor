@@ -199,4 +199,10 @@ You can use direct links to download the dataset. The data is stored in the csv 
 
 ![grafica_scroll_con_ejes](doc/img/HeatingSampleGif.gif)
 
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/HeatingSampleGif.gif" alt="test" width="200" height="200">
+  </a>
 
+**Figure 9.** *test gif.*
+</div>
