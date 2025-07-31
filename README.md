@@ -197,12 +197,10 @@ You can use direct links to download the dataset. The data is stored in the csv 
 | `Dataset_CXX_RZZ_SW_FY_GV.rar` | Raw data in CSV format | [144,000x5] | 6.5 MBytes | [Download](Dataset/Dataset_CXX_RZZ_SW_FY_GV.rar) | temp |
 
 
-![grafica_scroll_con_ejes](doc/img/HeatingSampleGif.gif)
-
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/HeatingSampleGif.gif" alt="test" width="200" height="200">
+    <img src="/doc/img/HeatingSampleGif.gif" alt="test" width="400" height="400">
   </a>
 
-**Figure 9.** *test gif.*
+**Figure 9.** *Sample of Heating Water.*
 </div>
