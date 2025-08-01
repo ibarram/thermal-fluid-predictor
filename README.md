@@ -144,7 +144,7 @@ This variable does not have a fixed value—it entirely depends on the water con
 </div>
 
 In the final step, shown in `Figure 6`, the output value for the LP gas valve opening is assigned (G“V”).
-This variable is not measured in terms of pressure, but rather by the amount of electrical current supplied to the solenoid valve to control its opening. This behavior is illustrated in Figure 7, which shows the functional characteristic curve. The valve operation is defined as follows:
+This variable is not measured in terms of pressure, but rather by the amount of electrical current supplied to the solenoid valve to control its opening. This behavior is illustrated in `Figure 7`, which shows the functional characteristic curve. The valve operation is defined as follows:
 
 - Gas Flow "Zero" (**GZ**): Applied current = 0 *mA*; the valve remains fully closed.
 - Gas Flow "Low" (**GL**): Applied current = 10 *mA*; the valve opens to a minimal position.
@@ -169,10 +169,10 @@ This variable is not measured in terms of pressure, but rather by the amount of 
 
 Now, let’s use an example to generate a file. We will need to assign the following parameters using the table in `Figure 1` as a reference:
 
--C01_R01: This is the first sample and our first repetition.
--SH: The water will begin heating, so we select the Heating option.
--FZ: The water flow will be zero for our first case; therefore, the outlet valve will remain closed, and we set the flow to Zero in the interface.
--GL: The LP gas flow will be low, so we select the Low option in the interface.
+- C01_R01: This is the first sample and our first repetition.
+- SH: The water will begin heating, so we select the Heating option.
+- FZ: The water flow will be zero for our first case; therefore, the outlet valve will remain closed, and we set the flow to Zero in the interface.
+- GL: The LP gas flow will be low, so we select the Low option in the interface.
 
 The final file name will be: **C01_R01_SH_FZ_GL**
 
