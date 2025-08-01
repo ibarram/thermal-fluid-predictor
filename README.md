@@ -174,7 +174,7 @@ Now, let’s use an example to generate a file. We will need to assign the follo
 - FZ: The water flow will be zero for our first case; therefore, the outlet valve will remain closed, and we set the flow to Zero in the interface.
 - GL: The LP gas flow will be low, so we select the Low option in the interface.
 
-The final file name will be: `**C01_R01_SH_FZ_GL**`
+The final file name will be: **`C01_R01_SH_FZ_GL`**
 
 ***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 8`, some elements in the “Gas Flow” section—such as the Zero condition—are crossed out. This is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
 
