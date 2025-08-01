@@ -167,16 +167,16 @@ This variable is not measured in terms of pressure, but rather by the amount of 
 **Figure 7.** *Electrovalve Characteristics.*
 </div>
 
-Now, let’s use an example to generate a file. We will need to assign the following parameters using the table in `Figure 1` as a reference:
+For example to generate a file. We will need to assign the following parameters using the table in `Figure 1` as a reference:
 
-- C01_R01: This is the first sample and our first repetition.
-- SH: The water will begin heating, so we select the Heating option.
-- FZ: The water flow will be zero for our first case; therefore, the outlet valve will remain closed, and we set the flow to Zero in the interface.
-- GL: The LP gas flow will be low, so we select the Low option in the interface.
+- **C01_R01**: First Sample then *C01*, and first repetition then *R01*.
+- **SH**: The water will begin heating, so we select the Heating option in State of the interface.
+- **FZ**: The water flow will be zero for our first case; therefore, the outlet valve will remain closed, and we set the Water Flow to Zero in the interface.
+- **GL**: The LP gas flow will be low, so we select the Low option in Gas Flow of the interface.
 
 The final file name will be: **`C01_R01_SH_FZ_GL`**
 
-***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 8`, some elements in the “Gas Flow” section—such as the Zero condition—are crossed out. This is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
+***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 8`, some elements in the “Gas Flow” section—such as the Zero condition—are crossed out, this is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -186,7 +186,7 @@ The final file name will be: **`C01_R01_SH_FZ_GL`**
 **Figure 8.** *Example, how to select variables for each file part.*
 </div>
 
-In this way, the 12 essential files of our process will be generated. Each file contains a total of 1,200 samples. That is, we will have 12 "*.csv*" files, each with dimensions [1200x5], giving us a total of [12x1200x5]. If we consider that 10 repetitions are generated for each file, we will have [12x10] .csv files. Combining this with the number of samples per file results in [12x10x1200x5] = [144,000x5] total samples.
+In this way, the 12 essential files of our process will be generated. Each file contains a total of 1,200 samples. That is, we will have 12 csv files, each with dimensions [1200x5], giving us a total of [12x1200x5]. If we consider that 10 repetitions are generated for each file, we will have [12x10] csv files. Combining this with the number of samples per file results in [12x10x1200x5] = [144,000x5] total samples.
 
 ## Get the Data
 
