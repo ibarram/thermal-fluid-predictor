@@ -200,11 +200,22 @@ You can use direct links to download the dataset. The data is stored in the csv 
 | `temp4` | Raw data in mat format | [144,000x5] | 6.5 MBytes | yy | tempx |
 | `temp5` | Cropped and proprocessed data in mat format | [144,000x5] | 6.5 MBytes | yy | tempx |
 
+Alternatively, you can clone this GitHub repository; the dataset appears under Dataset/. This repository also contains some scripts for load and visualization.
 
 ## Database
+The database is presented in two formats. The first format uses MATLAB software, providing two .mat files
 
+
+In addition to the dataset, scripts to load and read the data are provided for MATLAB, Python, R, and C
 
 ## Loading data
+Multiple scripts were created to efficiently load the dataset. These scripts facilitate the loading of both raw and processed data, enabling work at different stages of analysis. The scripts have been developed in MatLab, Python, R, and C.
+
+#MatLab
+
+#Python
+
+#R
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -225,6 +236,7 @@ You can use direct links to download the dataset. The data is stored in the csv 
 ## Implementations
 
 ## Benchmark
+Feel free to submit your benchmark by creating a new issue, and we'll display your results here. Before proceeding, ensure your benchmark doesn't already exist on this list. For further information, refer to our contributor guidelines.
 
 ## Publications
 
