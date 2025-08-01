@@ -211,11 +211,11 @@ In addition to the dataset, scripts to load and read the data are provided for M
 ## Loading data
 Multiple scripts were created to efficiently load the dataset. These scripts facilitate the loading of both raw and processed data, enabling work at different stages of analysis. The scripts have been developed in MatLab, Python, R, and C.
 
-#MatLab
+# MatLab
 
-#Python
+# Python
 
-#R
+# R
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
