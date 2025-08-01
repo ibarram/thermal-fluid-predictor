@@ -194,7 +194,11 @@ You can use direct links to download the dataset. The data is stored in the csv 
 
 |Name|Description|Samples|Size|Link|MD5 Checksum|
 |:-|:-|:-|:-|:-|:-|
-| `Dataset_CXX_RZZ_SW_FY_GV.rar` | Raw data in CSV format | [144,000x5] | 6.5 MBytes | [Download](Dataset/Dataset_CXX_RZZ_SW_FY_GV.rar) | temp |
+| `temp1` | Raw data in CSV format | [144,000x5] | 6.5 MBytes | [Download](Dataset/Dataset_CXX_RZZ_SW_FY_GV.rar) | tempx |
+| `temp2` | Raw data in CVS format arranged in folders | [144,000x5] | 6.5 MBytes | yy | tempx |
+| `temp3` | Cropped and preprocessed data in CSV fotmat | [144,000x5] | 6.5 MBytes | yy | tempx |
+| `temp4` | Raw data in mat format | [144,000x5] | 6.5 MBytes | yy | tempx |
+| `temp5` | Cropped and proprocessed data in mat format | [144,000x5] | 6.5 MBytes | yy | tempx |
 
 
 ## Database
