@@ -188,16 +188,34 @@ The final file name will be: **`C01_R01_SH_FZ_GL`**
 
 In this way, the 12 essential files of our process will be generated. Each file contains a total of 1,200 samples. That is, we will have 12 csv files, each with dimensions [1200x5], giving us a total of [12x1200x5]. If we consider that 10 repetitions are generated for each file, we will have [12x10] csv files. Combining this with the number of samples per file results in [12x10x1200x5] = [144,000x5] total samples.
 
+If you need to use the LabVIEW interface along with the code used to load it onto the STM32 board, the download links are attached.
+
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/labviewinterface.png" alt="labviewinterface" width="600" height="600">
+  </a>
+
+**Figure 9.** *Example view of interface from Labview.*
+</div>
+
 You can download the interface of Labview with the next link.
 
 |Name|Description|Size|Link|
 |:-|:-|:-|:-|
 | `Data_HeaterSystem.zip` | Labview interface to generate the database  | 288 KBytes | [Download](src/Data_HeaterSystem.zip) |
 
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/STM32IDE.png" alt="STM32IDE" width="600" height="600">
+  </a>
+
+**Figure 10.** *Platform of STM32IDECube.*
+</div>
+
 
 |Name|Description|Size|Link|
 |:-|:-|:-|:-|
-| `STM32_Code_tfp.zip` | Labview interface to generate the database  | 14.7 MBytes | [Download](src/STM32_Code_tfp.zip) |
+| `STM32_Code_tfp.zip` | STM32 Code  | 14.7 MBytes | [Download](src/STM32_Code_tfp.zip) |
 
 ## Get the Data
 
@@ -221,7 +239,7 @@ The database is presented in two formats. The first format uses MATLAB software,
     <img src="/doc/img/matfile.png" alt="matfile" width="600" height="600">
   </a>
 
-**Figure 9.** *Schematic representation of the data organized for MATLAB file.*
+**Figure 11.** *Schematic representation of the data organized for MATLAB file.*
 </div>
 
 In addition to the dataset, scripts to load and read the data are provided for MATLAB, Python, R, and C
@@ -248,7 +266,7 @@ Multiple scripts were created to efficiently load the dataset. These scripts fac
     <img src="/doc/img/CoolingSampleGif.gif" alt="Cooling" width="300" height="400">
   </a>
 
-**Figure 10.** *Samples of Heating Water | Steady Water | Cooling Water.*
+**Figure 12.** *Samples of Heating Water | Steady Water | Cooling Water.*
 </div>
 
 ## Implementations
