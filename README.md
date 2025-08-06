@@ -192,7 +192,7 @@ You can download the interface of Labview with the next link.
 
 |Name|Description|Size|Link|
 |:-|:-|:-|:-|
-| `Interface_HeaterSystem.exe` | Labview interface to generate the database  | 358 KBytes | [Download](src/Interface_HeaterSystem.exe) |
+| `Data_HeaterSystem.zip` | Labview interface to generate the database  | 288 KBytes | [Download](src/Data_HeaterSystem.zip) |
 
 ## Get the Data
 
@@ -200,17 +200,24 @@ You can use direct links to download the dataset. The data is stored in the csv 
 
 |Name|Description|Samples|Size|Link|MD5 Checksum|
 |:-|:-|:-|:-|:-|:-|
-| `temp1` | Raw data in CSV format | [144,000x5] | 6.5 MBytes | [Download](Dataset/Dataset_CXX_RZZ_SW_FY_GV.rar) | tempx |
-| `temp2` | Raw data in CVS format arranged in folders | [144,000x5] | 6.5 MBytes | yy | tempx |
-| `temp3` | Cropped and preprocessed data in CSV fotmat | [144,000x5] | 6.5 MBytes | yy | tempx |
-| `temp4` | Raw data in mat format | [144,000x5] | 6.5 MBytes | yy | tempx |
-| `temp5` | Cropped and proprocessed data in mat format | [144,000x5] | 6.5 MBytes | yy | tempx |
+| `temp1` | Raw data in CSV format | [144,000x5] | x MBytes | xx | tempx |
+| `data_thermal_fluid_predictor.zip` | Raw data in CVS format arranged in folders | [144,000x5] | 1.16 MBytes | [Download](Dataset/data_thermal_fluid_predictor.zip) | tempx |
+| `temp2` | Cropped and preprocessed data in CSV fotmat | [144,000x5] | x MBytes | xx | tempx |
+| `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.58 MBytes | [Download](Dataset/data_tfp.mat) | tempx |
+| `temp3` | Cropped and proprocessed data in mat format | [144,000x5] | x MBytes | xx | tempx |
 
 Alternatively, you can clone this GitHub repository; the dataset appears under Dataset/. This repository also contains some scripts for load and visualization.
 
 ## Database
 The database is presented in two formats. The first format uses MATLAB software, providing two .mat files
 
+<div align="center">
+  <a href="https://github.com/ibarram/thermal-fluid-predictor">
+    <img src="/doc/img/matfile.png" alt="matfile" width="600" height="600">
+  </a>
+
+**Figure 9.** *Schematic representation of the data organized for MATLAB file.*
+</div>
 
 In addition to the dataset, scripts to load and read the data are provided for MATLAB, Python, R, and C
 
@@ -236,7 +243,7 @@ Multiple scripts were created to efficiently load the dataset. These scripts fac
     <img src="/doc/img/CoolingSampleGif.gif" alt="Cooling" width="300" height="400">
   </a>
 
-**Figure 9.** *Samples of Heating Water | Steady Water | Cooling Water.*
+**Figure 10.** *Samples of Heating Water | Steady Water | Cooling Water.*
 </div>
 
 ## Implementations
