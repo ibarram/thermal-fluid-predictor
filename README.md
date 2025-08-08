@@ -223,11 +223,9 @@ You can use direct links to download the dataset. The data is stored in the csv 
 
 |Name|Description|Samples|Size|Link|MD5 Checksum|
 |:-|:-|:-|:-|:-|:-|
-| `temp1` | Raw data in CSV format | [144,000x5] | x MBytes | xx | tempx |
-| `data_thermal_fluid_predictor.zip` | Raw data in CVS format arranged in folders | [144,000x5] | 1.16 MBytes | [Download](Dataset/data_thermal_fluid_predictor.zip) | tempx |
-| `temp2` | Cropped and preprocessed data in CSV fotmat | [144,000x5] | x MBytes | xx | tempx |
-| `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.58 MBytes | [Download](Dataset/data_tfp.mat) | tempx |
-| `temp3` | Cropped and proprocessed data in mat format | [144,000x5] | x MBytes | xx | tempx |
+| `Raw_Signals_tfp.zip` | Raw data in CSV format | [144,000x5] | 1.2 MBytes | [Download](Dataset/Raw_Signals_tfp.zip) | tempx |
+| `Raw_Signals_tfp_Folders.zip` | Raw data in CVS format arranged in folders | [144,000x5] | 1.21 MBytes | [Download](Dataset/Raw_Signals_tfp_Folders.zip) | tempx |
+| `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.94 MBytes | [Download](Dataset/data_tfp.mat) | tempx |
 
 Alternatively, you can clone this GitHub repository; the dataset appears under Dataset/. This repository also contains some scripts for load and visualization.
 
