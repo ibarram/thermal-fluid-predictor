@@ -230,7 +230,7 @@ You can use direct links to download the dataset. The data is stored in the csv 
 Alternatively, you can clone this GitHub repository; the dataset appears under Dataset/. This repository also contains some scripts for load and visualization.
 
 ## Database
-The database is presented in two formats. The first format uses MATLAB software, providing two .mat files
+The database is presented in two formats. The first format uses MATLAB software, providing one .mat files referring  to the thermal-fluid-predictor. The organization of the .mat files is illustrated in , where the values and number of samples change depending on which file is selected.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -239,6 +239,9 @@ The database is presented in two formats. The first format uses MATLAB software,
 
 **Figure 11.** *Schematic representation of the data organized for MATLAB file.*
 </div>
+
+The database was organized into folders, as depicted in `Figure 11`. Each folder includes the acquired measurements in files.
+
 
 In addition to the dataset, scripts to load and read the data are provided for MATLAB, Python, R, and C
 
@@ -274,12 +277,23 @@ Feel free to submit your benchmark by creating a new issue, and we'll display yo
 
 ## Publications
 
+Publications from the scientific community that use the TFP dataset:
+
+
 ## Contact
 
-[Dr. M.-A. Ibarra-Manzano](mailto:ibarram@ugto.mx?subject=[GitHub]%20T-F-P%20dataset) - [ORCID: 0000-0003-4317-0248](https://orcid.org/0000-0003-4317-0248) - [SCOPUS: 15837259000](https://www.scopus.com/authid/detail.uri?authorId=15837259000)
+[Dr. M.-A. Ibarra-Manzano](mailto:ibarram@ugto.mx?subject=[GitHub]%20TFP%20dataset) - [ORCID: 0000-0003-4317-0248](https://orcid.org/0000-0003-4317-0248) - [SCOPUS: 15837259000](https://www.scopus.com/authid/detail.uri?authorId=15837259000)
 
-[M.I. M.-A. Armenta-Loredo](mailto:ma.armentaloredo@ugto.mx?subject=[GitHub]%20T-F-P%20dataset) - [ORCID: 0009-0006-7338-6065](https://orcid.org/0009-0006-7338-6065) - 
+[M.I. M.-A. Armenta-Loredo](mailto:ma.armentaloredo@ugto.mx?subject=[GitHub]%20TFP%20dataset) - [ORCID: 0009-0006-7338-6065](https://orcid.org/0009-0006-7338-6065) - 
+
+Project Link: [thermal-fluid-predictor (TFP)](https://github.com/ibarram/ITSC)
 
 ## Citing thermal-fluid-predictor database
+
+If you use TFP database in a scientific publication, we would appreciate references to the following paper:
+
+
+Biblatex entry:
+
 
 ## License
