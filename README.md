@@ -209,7 +209,7 @@ You can download the interface of Labview with the next link.
     <img src="/doc/img/STM32IDE.png" alt="STM32IDE" width="600" height="600">
   </a>
 
-**Figure 10.** *Platform of STM32IDECube.*
+**Figure 10.** *Platform of STM32IDECube.* (https://www.st.com/en/development-tools/stm32cubeide.html#overview).
 </div>
 
 
