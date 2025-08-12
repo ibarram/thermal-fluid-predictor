@@ -276,6 +276,10 @@ Feel free to submit your benchmark by creating a new issue, and we'll display yo
 
 ## Contact
 
+[Dr. M.-A. Ibarra-Manzano](mailto:ibarram@ugto.mx?subject=[GitHub]%20T-F-P%20dataset) - [ORCID: 0000-0003-4317-0248](https://orcid.org/0000-0003-4317-0248) - [SCOPUS: 15837259000](https://www.scopus.com/authid/detail.uri?authorId=15837259000)
+
+[M.I. M.-A. Armenta-Loredo](mailto:ma.armentaloredo@ugto.mx?subject=[GitHub]%20T-F-P%20dataset) - [ORCID: 0009-0006-7338-6065](https://orcid.org/0009-0006-7338-6065) - 
+
 ## Citing thermal-fluid-predictor database
 
 ## License
