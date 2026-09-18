@@ -193,6 +193,42 @@ The final file name will be: **`C01_R01_SH_FZ_GL`**
 **Figure 8.** *Example, how to select variables for each file part.*
 </div>
 
+```mermaid
+flowchart TD
+    H["Heating"]
+
+    H --> WZ["Zero"]
+    H --> WL["Low"]
+    H --> WH["High"]
+
+    WZ --> GZ1["Zero ❌"]
+    WZ --> GL1["Low"]
+    WZ --> GH1["High"]
+
+    WL --> GZ2["Zero ❌"]
+    WL --> GL2["Low"]
+    WL --> GH2["High"]
+
+    WH --> GZ3["Zero ❌"]
+    WH --> GL3["Low"]
+    WH --> GH3["High"]
+
+    GL1 --> F["C01_R01_SH_FZ_GL"]
+
+    classDef state fill:#7ecba1,stroke:#2d7d52,color:#1a1a1a
+    classDef flow  fill:#cfe2f3,stroke:#1a1a1a,color:#1a1a1a
+    classDef gas   fill:#fdf2cc,stroke:#bf9000,color:#1a1a1a
+    classDef sel   fill:#4caf7d,stroke:#1b5e3f,stroke-width:3px,color:#ffffff
+    classDef file  fill:#7ecba1,stroke:#2d7d52,stroke-width:2px,color:#1a1a1a
+
+    class H sel
+    class WL,WH flow
+    class WZ sel
+    class GZ1,GZ2,GZ3,GH1,GH2,GH3,GL2,GL3 gas
+    class GL1 sel
+    class F file
+```
+
 In this way, the 12 essential files of our process will be generated. Each file contains a total of 1,200 samples. That is, we will have 12 csv files, each with dimensions [1200x5], giving us a total of [12x1200x5]. If we consider that 10 repetitions are generated for each file, we will have [12x10] csv files. Combining this with the number of samples per file results in [12x10x1200x5] = [144,000x5] total samples.
 
 If you need to use the LabVIEW interface along with the code used to load it onto the STM32 board, the download links are attached.
