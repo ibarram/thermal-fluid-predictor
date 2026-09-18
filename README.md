@@ -94,7 +94,7 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
     <img src="/doc/img/testbench_fullview.png" alt="testbenchfullview1" width="800" height="400">
   </a>
 
-**Figure 2.** *Above is a photograph of the test bench used to generate the database. This setup provides a visual representation of our data collection process. **Left View of System** | **Front View of System** | **Right View of System**.*
+**Figure 1.** *Above is a photograph of the test bench used to generate the database. This setup provides a visual representation of our data collection process. **Left View of System** | **Front View of System** | **Right View of System**.*
 </div>
 
 The electrical signals from the sensors mounted on the heating system are processed using two devices. The first is the STM32L476RGT6 microcontroller, integrated on a Nucleo Board, which receives signals from two temperature sensors (NTC Thermistor 3950 MF52 100K ohm 1%) to measure voltage variations caused by changes in the sensor's resistance when exposed to temperature. Each of these two sensors is externally mounted on the inlet and outlet water pipes, respectively.
@@ -105,17 +105,17 @@ The second device is the NI USB-TC01 module, which enables the measurement of th
 
 As mentioned earlier, the data acquisition is structured based on the "water process" concept to generate the corresponding files. The naming convention for the files follows this structure: **C"XX"_R"ZZ"_S"W"_F"Y"_G"V"**, which will be explained in detail in each of the following images.
 
-As initially shown in `Figure 3`, the first part of the filename indicates the file number and its repetition (**C"XX"_R"ZZ"**). In total, there are 12 unique files, each of which was replicated 10 times for this dataset. However, additional repetitions can be generated if needed.
+As initially shown in `Figure 2`, the first part of the filename indicates the file number and its repetition (**C"XX"_R"ZZ"**). In total, there are 12 unique files, each of which was replicated 10 times for this dataset. However, additional repetitions can be generated if needed.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
     <img src="/doc/img/Interface2_last.png" alt="Interface2_last" width="600" height="600">
   </a>
 
-**Figure 3.** *Obtain Combination number and Repetition number.*
+**Figure 2.** *Obtain Combination number and Repetition number.*
 </div>
 
-In the second step, as shown in `Figure 4`, the "water process" is assigned (**S"W"**):
+In the second step, as shown in `Figure 3`, the "water process" is assigned (**S"W"**):
 
 - Water is being heated (**SH – State Heating**).
 - Water temperature is being maintained at a set point (**SS – State Steady**).
@@ -132,10 +132,10 @@ In the final case (SC), the system enters the cooling phase, where both the LP g
     <img src="/doc/img/Interface3_last.png" alt="Interface3_last" width="600" height="600">
   </a>
 
-**Figure 4.** *Obtain Water Temperature State*
+**Figure 3.** *Obtain Water Temperature State*
 </div>
 
-In the third step, shown in `Figure 5`, the water flow rate circulating through the pipe is assigned (**F"Y"**).
+In the third step, shown in `Figure 4`, the water flow rate circulating through the pipe is assigned (**F"Y"**).
 This variable does not have a fixed value—it entirely depends on the water consumption or demand from the user. Therefore, only estimated values were defined by our research team:
 
 - Water Flow "Zero" (**FZ**): Flow rate should be zero, meaning the outlet valve of the water heater is completely closed, while the inlet valve remains open.
@@ -147,11 +147,11 @@ This variable does not have a fixed value—it entirely depends on the water con
     <img src="/doc/img/Interface4_last.png" alt="Interface4_last" width="600" height="600">
   </a>
 
-**Figure 5.** *Obtain Water Flow.*
+**Figure 4.** *Obtain Water Flow.*
 </div>
 
-In the final step, shown in `Figure 6`, the output value for the LP gas valve opening is assigned (**G"V"**).
-This variable is not measured in terms of pressure, but rather by the amount of electrical current supplied to the solenoid valve to control its opening. This behavior is illustrated in `Figure 7`, which shows the functional characteristic curve. The valve operation is defined as follows:
+In the final step, shown in `Figure 5`, the output value for the LP gas valve opening is assigned (**G"V"**).
+This variable is not measured in terms of pressure, but rather by the amount of electrical current supplied to the solenoid valve to control its opening. This behavior is illustrated in `Figure 6`, which shows the functional characteristic curve. The valve operation is defined as follows:
 
 - Gas Flow "Zero" (**GZ**): Applied current = 0 *mA*; the valve remains fully closed.
 - Gas Flow "Low" (**GL**): Applied current = 10 *mA*; the valve opens to a minimal position.
@@ -162,7 +162,7 @@ This variable is not measured in terms of pressure, but rather by the amount of 
     <img src="/doc/img/Interface5_last.png" alt="Interface5_last" width="600" height="600">
   </a>
 
-**Figure 6.** *Obtain Gas Flow.*
+**Figure 5.** *Obtain Gas Flow.*
 </div>
 
 
@@ -171,10 +171,10 @@ This variable is not measured in terms of pressure, but rather by the amount of 
     <img src="/doc/img/GraphGas.png" alt="GraphGas" width="500" height="500">
   </a>
 
-**Figure 7.** *Electrovalve Characteristics.*
+**Figure 6.** *Electrovalve Characteristics.*
 </div>
 
-For example to generate a file. We will need to assign the following parameters using the table in `Figure 1` as a reference:
+For example to generate a file. We will need to assign the following parameters using `Table 1` as a reference:
 
 - **C01_R01**: First Sample then *C01*, and first repetition then *R01*.
 - **SH**: The water will begin heating, so we select the Heating option in State of the interface.
@@ -183,7 +183,7 @@ For example to generate a file. We will need to assign the following parameters 
 
 The final file name will be: **`C01_R01_SH_FZ_GL`**
 
-***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 8`, some elements in the "Gas Flow" section—such as the Zero condition—are crossed out, this is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
+***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 7`, some elements in the "Gas Flow" section—such as the Zero condition—are crossed out, this is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
 
 ```mermaid
 flowchart TD
@@ -221,7 +221,7 @@ flowchart TD
     class F file
 ```
 
-**Figure 8.** *Example, how to select variables for each file part.*
+**Figure 7.** *Example, how to select variables for each file part.*
 
 In this way, the 12 essential files of our process will be generated. Each file contains a total of 1,200 samples. That is, we will have 12 csv files, each with dimensions [1200x5], giving us a total of [12x1200x5]. If we consider that 10 repetitions are generated for each file, we will have [12x10] csv files. Combining this with the number of samples per file results in [12x10x1200x5] = [144,000x5] total samples.
 
@@ -232,7 +232,7 @@ If you need to use the LabVIEW interface along with the code used to load it ont
     <img src="/doc/img/labviewinterface.png" alt="labviewinterface" width="600" height="600">
   </a>
 
-**Figure 9.** *Example view of interface from Labview.*
+**Figure 8.** *Example view of interface from Labview.*
 </div>
 
 You can download the interface of Labview with the next link.
@@ -246,7 +246,7 @@ You can download the interface of Labview with the next link.
     <img src="/doc/img/STM32IDE.png" alt="STM32IDE" width="600" height="600">
   </a>
 
-**Figure 10.** *Platform of [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html#overview).*
+**Figure 9.** *Platform of [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html#overview).*
 </div>
 
 
@@ -280,14 +280,14 @@ Alternatively, you can clone this GitHub repository; the dataset appears under `
 
 ## Database
 
-The database is presented in two formats. The first format uses MATLAB software, providing one `.mat` file referring to the thermal-fluid-predictor. The organization of the `.mat` file is illustrated in `Figure 11`, where the values and number of samples change depending on which file is selected.
+The database is presented in two formats. The first format uses MATLAB software, providing one `.mat` file referring to the thermal-fluid-predictor. The organization of the `.mat` file is illustrated in `Figure 10`, where the values and number of samples change depending on which file is selected.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
     <img src="/doc/img/matfile.png" alt="matfile" width="600" height="600">
   </a>
 
-**Figure 11.** *Schematic representation of the data organized for MATLAB file.*
+**Figure 10.** *Schematic representation of the data organized for MATLAB file.*
 </div>
 
 The second format is a set of CSV files organized into folders, one folder per operating state, available in `Raw_Signals_tfp_Folders.zip`. Each folder includes the acquired measurements in individual files following the naming convention described above.
@@ -371,7 +371,7 @@ int main(void) {
     <img src="/doc/img/CoolingSampleGif.gif" alt="Cooling" width="300" height="400">
   </a>
 
-**Figure 12.** *Samples of Heating Water | Steady Water | Cooling Water.*
+**Figure 11.** *Samples of Heating Water | Steady Water | Cooling Water.*
 </div>
 
 ## Implementations
