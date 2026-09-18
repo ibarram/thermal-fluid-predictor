@@ -187,13 +187,43 @@ El nombre final del archivo será: **`C01_R01_SH_FZ_GL`**
 
 ***Nota:*** deben tenerse en cuenta ciertas consideraciones en algunos casos. Por ejemplo, como se muestra en la `Figura 8`, algunos elementos de la sección «Gas Flow» —como la condición Zero— aparecen tachados, ya que el agua no puede calentarse si no hay flujo de gas; por lo tanto, no tiene sentido considerar esa opción.
 
-<div align="center">
-  <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Diagram1Combination2.png" alt="Diagram1Combination2" width="600" height="600">
-  </a>
+```mermaid
+flowchart TD
+    H["Heating"]
+
+    H --> WZ["Zero"]
+    H --> WL["Low"]
+    H --> WH["High"]
+
+    WZ --> GZ1["Zero ❌"]
+    WZ --> GL1["Low"]
+    WZ --> GH1["High"]
+
+    WL --> GZ2["Zero ❌"]
+    WL --> GL2["Low"]
+    WL --> GH2["High"]
+
+    WH --> GZ3["Zero ❌"]
+    WH --> GL3["Low"]
+    WH --> GH3["High"]
+
+    GL1 --> F["C01_R01_SH_FZ_GL"]
+
+    classDef state fill:#7ecba1,stroke:#2d7d52,color:#1a1a1a
+    classDef flow  fill:#cfe2f3,stroke:#1a1a1a,color:#1a1a1a
+    classDef gas   fill:#fdf2cc,stroke:#bf9000,color:#1a1a1a
+    classDef sel   fill:#4caf7d,stroke:#1b5e3f,stroke-width:3px,color:#ffffff
+    classDef file  fill:#7ecba1,stroke:#2d7d52,stroke-width:2px,color:#1a1a1a
+
+    class H sel
+    class WL,WH flow
+    class WZ sel
+    class GZ1,GZ2,GZ3,GH1,GH2,GH3,GL2,GL3 gas
+    class GL1 sel
+    class F file
+```
 
 **Figura 8.** *Ejemplo de cómo seleccionar las variables de cada parte del archivo.*
-</div>
 
 De este modo se generan los 12 archivos esenciales del proceso. Cada archivo contiene 1 200 muestras, es decir, 12 archivos CSV con dimensiones [1200x5], lo que da un total de [12x1200x5]. Si se consideran las 10 repeticiones por archivo, se obtienen [12x10] archivos CSV. Combinando esto con el número de muestras por archivo resulta [12x10x1200x5] = [144 000x5] muestras en total.
 
