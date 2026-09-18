@@ -62,15 +62,24 @@ Each process has a total sampling duration of 4 minutes.
 
 Samples are recorded every 200 *ms*, that is, at a sampling frequency of 5 *Hz*, which means that in each 4-minute phase we have 1,200 samples.
 
-The construction of the data files was based on the following table of the Figure 1, which includes 12 unique, non-repeating combinations.
+The construction of the data files was based on the following table of the Table 1, which includes 12 unique, non-repeating combinations.
 
-<div align="center">
-  <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Examplefile.png" alt="Examplefile" width="600" height="300">
-  </a>
+| # | File Name | Rep. | Water State | Water Flow | Gas Flow | Inlet Temp. (°C) | Set Temp. (°C) |
+|:-:|:-|:-:|:-|:-|:-|:-:|:-:|
+| 1 | `C01_R01_SH_FZ_GL` | 1 | Heating | Zero | Low | 27 | — |
+| 2 | `C02_R01_SH_FZ_GH` | 1 | Heating | Zero | High | 32 | — |
+| 3 | `C03_R01_SH_FL_GL` | 1 | Heating | Low | Low | 26 | — |
+| 4 | `C04_R01_SH_FL_GH` | 1 | Heating | Low | High | 28 | — |
+| 5 | `C05_R01_SH_FH_GL` | 1 | Heating | High | Low | 25 | — |
+| 6 | `C06_R01_SH_FH_GH` | 1 | Heating | High | High | 25 | — |
+| 7 | `C07_R01_SS_FL_GL` | 1 | Steady | Low | Low | — | 41 |
+| 8 | `C08_R01_SS_FL_GH` | 1 | Steady | Low | High | — | 40 |
+| 9 | `C09_R01_SS_FH_GL` | 1 | Steady | High | Low | — | 38 |
+| 10 | `C10_R01_SS_FH_GH` | 1 | Steady | High | High | — | 35 |
+| 11 | `C11_R01_SC_FL_GZ` | 1 | Cooling | Low | Zero | — | — |
+| 12 | `C12_R01_SC_FH_GZ` | 1 | Cooling | High | Zero | — | — |
 
-**Figure 1.** *Table of combinations for samples.*
-</div>
+**Table 1.** *Combinations used to generate the data files. Each combination was repeated 10 times, yielding 120 records in total. Inlet temperature applies only to the Heating state; set temperature only to the Steady state.*
 
 Therefore, the total number of data files is 12 unique files. But we have repetitions files to generate more dataset information, 10 files per process, resulting in a total of 120 files.
 
