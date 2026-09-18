@@ -185,14 +185,6 @@ The final file name will be: **`C01_R01_SH_FZ_GL`**
 
 ***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 8`, some elements in the "Gas Flow" section—such as the Zero condition—are crossed out, this is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
 
-<div align="center">
-  <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Diagram1Combination2.png" alt="Diagram1Combination2" width="600" height="600">
-  </a>
-
-**Figure 8.** *Example, how to select variables for each file part.*
-</div>
-
 ```mermaid
 flowchart TD
     H["Heating"]
@@ -228,6 +220,8 @@ flowchart TD
     class GL1 sel
     class F file
 ```
+
+**Figure 8.** *Example, how to select variables for each file part.*
 
 In this way, the 12 essential files of our process will be generated. Each file contains a total of 1,200 samples. That is, we will have 12 csv files, each with dimensions [1200x5], giving us a total of [12x1200x5]. If we consider that 10 repetitions are generated for each file, we will have [12x10] csv files. Combining this with the number of samples per file results in [12x10x1200x5] = [144,000x5] total samples.
 
