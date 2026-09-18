@@ -62,7 +62,7 @@ Each process has a total sampling duration of 4 minutes.
 
 Samples are recorded every 200 *ms*, that is, at a sampling frequency of 5 *Hz*, which means that in each 4-minute phase we have 1,200 samples.
 
-The construction of the data files was based on the following table of the Table 1, which includes 12 unique, non-repeating combinations.
+The construction of the data files was based on the following table 1, which includes 12 unique, non-repeating combinations.
 
 | # | File Name | Rep. | Water State | Water Flow | Gas Flow | Inlet Temp. (°C) | Set Temp. (°C) |
 |:-:|:-|:-:|:-|:-|:-|:-:|:-:|

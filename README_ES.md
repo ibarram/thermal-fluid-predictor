@@ -62,15 +62,26 @@ Cada proceso tiene una duración total de muestreo de 4 minutos.
 
 Las muestras se registran cada 200 *ms*, es decir, a una frecuencia de muestreo de 5 *Hz*, lo que significa que en cada fase de 4 minutos se obtienen 1 200 muestras.
 
-La construcción de los archivos de datos se basó en la tabla de la Figura 1, que incluye 12 combinaciones únicas y no repetidas.
+La construcción de los archivos de datos se basó en la tabla 1, que incluye 12 combinaciones únicas y no repetidas.
 
-<div align="center">
-  <a href="https://github.com/ibarram/thermal-fluid-predictor">
-    <img src="/doc/img/Examplefile.png" alt="Examplefile" width="600" height="300">
-  </a>
+| # | Nombre de archivo | Rep. | Estado del agua | Flujo de agua | Flujo de gas | Temp. entrada (°C) | Temp. consigna (°C) |
+|:-:|:-|:-:|:-|:-|:-|:-:|:-:|
+| 1 | `C01_R01_SH_FZ_GL` | 1 | Heating | Zero | Low | 27 | — |
+| 2 | `C02_R01_SH_FZ_GH` | 1 | Heating | Zero | High | 32 | — |
+| 3 | `C03_R01_SH_FL_GL` | 1 | Heating | Low | Low | 26 | — |
+| 4 | `C04_R01_SH_FL_GH` | 1 | Heating | Low | High | 28 | — |
+| 5 | `C05_R01_SH_FH_GL` | 1 | Heating | High | Low | 25 | — |
+| 6 | `C06_R01_SH_FH_GH` | 1 | Heating | High | High | 25 | — |
+| 7 | `C07_R01_SS_FL_GL` | 1 | Steady | Low | Low | — | 41 |
+| 8 | `C08_R01_SS_FL_GH` | 1 | Steady | Low | High | — | 40 |
+| 9 | `C09_R01_SS_FH_GL` | 1 | Steady | High | Low | — | 38 |
+| 10 | `C10_R01_SS_FH_GH` | 1 | Steady | High | High | — | 35 |
+| 11 | `C11_R01_SC_FL_GZ` | 1 | Cooling | Low | Zero | — | — |
+| 12 | `C12_R01_SC_FH_GZ` | 1 | Cooling | High | Zero | — | — |
 
-**Figura 1.** *Tabla de combinaciones para las muestras.*
-</div>
+**Tabla 1.** *Combinaciones utilizadas para generar los archivos de datos. Cada
+combinación se repitió 10 veces, con un total de 120 registros. La temperatura
+de entrada aplica solo al estado Heating; la de consigna, solo al estado Steady.*
 
 Por lo tanto, el número total de archivos de datos únicos es 12. No obstante, se generaron repeticiones para ampliar la información del conjunto de datos: 10 archivos por combinación, lo que resulta en un total de 120 archivos.
 
