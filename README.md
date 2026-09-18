@@ -3,8 +3,8 @@
 [![GitHub discussions](https://img.shields.io/github/discussions/ibarram/thermal-fluid-predictor)](https://github.com/ibarram/thermal-fluid-predictor/discussions)
 [![GitHub issues](https://img.shields.io/github/issues/ibarram/thermal-fluid-predictor)](https://github.com/ibarram/thermal-fluid-predictor/issues)
 [![Readme-ES](https://img.shields.io/badge/README-Español-green.svg)](README_ES.md)
-![Gitter](https://img.shields.io/gitter/room/ibarram/thermal-fluid-predictor)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Code: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <br />
 <div align="center">
@@ -20,8 +20,6 @@
     <a href="https://github.com/ibarram/thermal-fluid-predictor"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ibarram/thermal-fluid-predictor">View Demo</a>
-    ·
     <a href="https://github.com/ibarram/thermal-fluid-predictor/issues">Report Bug</a>
     ·
     <a href="https://github.com/ibarram/thermal-fluid-predictor/issues">Request Feature</a>
@@ -29,7 +27,7 @@
 </div>
 
 <details><summary>Table of Contents</summary><p>
- 
+
  * [Abstract](#abstract)
 
  * [Testbench](#testbench)
@@ -46,7 +44,7 @@
 
  * [Publications](#publications)
 
- * [Contact](#Contact)
+ * [Contact](#contact)
 
  * [Citing thermal-fluid-predictor database](#citing-thermal-fluid-predictor-database)
 
@@ -58,11 +56,11 @@
 
 Thermal Fluid Predictor is a cross-platform project for modeling and predicting fluid temperature behavior in real-time. The repository includes implementations in Python, MATLAB, C, and R, tailored for integration into energy-constrained embedded systems such as gas water heaters. It provides curated datasets, trained models, and system diagrams to support reproducible development, simulation, and deployment.
 
-The dataset contains measurements of five variables obtained from the Rapid Recovery Water Heater. The sampling methodology is based on the **“water state process.”**
+The dataset contains measurements of five variables obtained from the Rapid Recovery Water Heater. The sampling methodology is based on the **"water state process."**
 
 Each process has a total sampling duration of 4 minutes.
 
-Samples are recorded every 200 *ms*, which means that in each 4-minute phase we have 1,200 samples.
+Samples are recorded every 200 *ms*, that is, at a sampling frequency of 5 *Hz*, which means that in each 4-minute phase we have 1,200 samples.
 
 The construction of the data files was based on the following table of the Figure 1, which includes 12 unique, non-repeating combinations.
 
@@ -70,7 +68,7 @@ The construction of the data files was based on the following table of the Figur
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
     <img src="/doc/img/Examplefile.png" alt="Examplefile" width="600" height="300">
   </a>
-  
+
 **Figure 1.** *Table of combinations for samples.*
 </div>
 
@@ -80,7 +78,7 @@ Therefore, the total number of data files is 12 unique files. But we have repeti
 
 The dataset was acquired in the Laboratory of Electrical Engineering, Division of Engineering at Irapuato-Salamanca Campus of the University of Guanajuato, Mexico.
 
-The testbench consists of a Rapid Recovery Water Heater System that operates with LP gas and supplies 13 liters of water per minute. It is powered by two 3V batteries and includes a servo valve to control the LP gas supply.
+The testbench consists of a Rapid Recovery Water Heater System that operates with LP gas and supplies 13 liters of water per minute. It is powered by two 1.5 V D-cell batteries connected in series (3 V total) and includes a servo valve to control the LP gas supply.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -90,15 +88,15 @@ The testbench consists of a Rapid Recovery Water Heater System that operates wit
 **Figure 2.** *Above is a photograph of the test bench used to generate the database. This setup provides a visual representation of our data collection process. **Left View of System** | **Front View of System** | **Right View of System**.*
 </div>
 
-The electrical signals from the sensors mounted on the heating system are processed using two devices. The first is the STM32L476RGT6 microcontroller, integrated on a Nucleo Board, which receives signals from two temperature sensors (NTC Thermistor 3950 MF52 100K ohm 1%) to measure voltage variations caused by changes in the sensor’s resistance when exposed to temperature. Each of these two sensors is externally mounted on the inlet and outlet water pipes, respectively.
+The electrical signals from the sensors mounted on the heating system are processed using two devices. The first is the STM32L476RGT6 microcontroller, integrated on a Nucleo Board, which receives signals from two temperature sensors (NTC Thermistor 3950 MF52 100K ohm 1%) to measure voltage variations caused by changes in the sensor's resistance when exposed to temperature. Each of these two sensors is externally mounted on the inlet and outlet water pipes, respectively.
 
 It also collects water flow data using a Hall-effect sensor (YF-B1 flow sensor), which measures the pulses per second (Hz) generated by the flow of water through the pipe.
 
 The second device is the NI USB-TC01 module, which enables the measurement of the outlet temperature using a precision Type K thermocouple probe.
 
-As mentioned earlier, the data acquisition is structured based on the "water process" concept to generate the corresponding files. The naming convention for the files follows this structure: **C“XX”_R“ZZ”_S“W”_F“Y”_G“V”**, which will be explained in detail in each of the following images.
+As mentioned earlier, the data acquisition is structured based on the "water process" concept to generate the corresponding files. The naming convention for the files follows this structure: **C"XX"_R"ZZ"_S"W"_F"Y"_G"V"**, which will be explained in detail in each of the following images.
 
-As initially shown in `Figure 3`, the first part of the filename indicates the file number and its repetition (**C“XX”_R“ZZ”**). In total, there are 12 unique files, each of which was replicated 10 times for this dataset. However, additional repetitions can be generated if needed.
+As initially shown in `Figure 3`, the first part of the filename indicates the file number and its repetition (**C"XX"_R"ZZ"**). In total, there are 12 unique files, each of which was replicated 10 times for this dataset. However, additional repetitions can be generated if needed.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -108,13 +106,13 @@ As initially shown in `Figure 3`, the first part of the filename indicates the f
 **Figure 3.** *Obtain Combination number and Repetition number.*
 </div>
 
-In the second step, as shown in `Figure 4`, the "water process" is assigned (**S“W”**):
+In the second step, as shown in `Figure 4`, the "water process" is assigned (**S"W"**):
 
 - Water is being heated (**SH – State Heating**).
 - Water temperature is being maintained at a set point (**SS – State Steady**).
 - Water is being cooled down (**SC – State Cooling**).
 
-For each case, the sampling duration is 4 minutes, with one sample taken every second—resulting in a sampling frequency of 4.16 *mHz*, and a total of 1200 samples per full cycle.
+For each case, the sampling duration is 4 minutes with one sample taken every 200 *ms*, corresponding to a sampling frequency of 5 *Hz* and a total of 1,200 samples per full cycle.
 
 In the first case (SH), water is actively heated, so both the LP gas output and the ignition spark are activated to produce a flame.
 In the second case (SS), a SET temperature is defined and a basic control method is applied, which simply turns the gas source on and off to maintain a relatively stable (though not precisely controlled) temperature, only for experimental purposes.
@@ -128,12 +126,12 @@ In the final case (SC), the system enters the cooling phase, where both the LP g
 **Figure 4.** *Obtain Water Temperature State*
 </div>
 
-In the third step, shown in `Figure 5`, the water flow rate circulating through the pipe is assigned (**F“Y”**).
+In the third step, shown in `Figure 5`, the water flow rate circulating through the pipe is assigned (**F"Y"**).
 This variable does not have a fixed value—it entirely depends on the water consumption or demand from the user. Therefore, only estimated values were defined by our research team:
 
 - Water Flow "Zero" (**FZ**): Flow rate should be zero, meaning the outlet valve of the water heater is completely closed, while the inlet valve remains open.
-- Water Flow "Low" (**FL**): Flow rate is between 4–6 *Lt/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was set at a halfway position.
-- Water Flow "High" (**FH**): Flow rate is between 12–15 *Lt/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was fully opened.
+- Water Flow "Low" (**FL**): Flow rate is between 4–7 *L/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was set at a halfway position.
+- Water Flow "High" (**FH**): Flow rate is between 12–15 *L/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was fully opened.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -143,7 +141,7 @@ This variable does not have a fixed value—it entirely depends on the water con
 **Figure 5.** *Obtain Water Flow.*
 </div>
 
-In the final step, shown in `Figure 6`, the output value for the LP gas valve opening is assigned (G“V”).
+In the final step, shown in `Figure 6`, the output value for the LP gas valve opening is assigned (**G"V"**).
 This variable is not measured in terms of pressure, but rather by the amount of electrical current supplied to the solenoid valve to control its opening. This behavior is illustrated in `Figure 7`, which shows the functional characteristic curve. The valve operation is defined as follows:
 
 - Gas Flow "Zero" (**GZ**): Applied current = 0 *mA*; the valve remains fully closed.
@@ -176,7 +174,7 @@ For example to generate a file. We will need to assign the following parameters 
 
 The final file name will be: **`C01_R01_SH_FZ_GL`**
 
-***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 8`, some elements in the “Gas Flow” section—such as the Zero condition—are crossed out, this is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
+***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 8`, some elements in the "Gas Flow" section—such as the Zero condition—are crossed out, this is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -209,7 +207,7 @@ You can download the interface of Labview with the next link.
     <img src="/doc/img/STM32IDE.png" alt="STM32IDE" width="600" height="600">
   </a>
 
-**Figure 10.** *Platform of STM32IDECube.* (https://www.st.com/en/development-tools/stm32cubeide.html#overview).
+**Figure 10.** *Platform of [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html#overview).*
 </div>
 
 
@@ -223,14 +221,27 @@ You can use direct links to download the dataset. The data is stored in the csv 
 
 |Name|Description|Samples|Size|Link|MD5 Checksum|
 |:-|:-|:-|:-|:-|:-|
-| `Raw_Signals_tfp.zip` | Raw data in CSV format | [144,000x5] | 1.2 MBytes | [Download](Dataset/Raw_Signals_tfp.zip) | tempx |
-| `Raw_Signals_tfp_Folders.zip` | Raw data in CVS format arranged in folders | [144,000x5] | 1.21 MBytes | [Download](Dataset/Raw_Signals_tfp_Folders.zip) | tempx |
-| `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.94 MBytes | [Download](Dataset/data_tfp.mat) | tempx |
+| `Raw_Signals_tfp.zip` | Raw data in CSV format | [144,000x5] | 1.2 MBytes | [Download](Dataset/Raw_Signals_tfp.zip) | *(pending)* |
+| `Raw_Signals_tfp_Folders.zip` | Raw data in CSV format arranged in folders | [144,000x5] | 1.21 MBytes | [Download](Dataset/Raw_Signals_tfp_Folders.zip) | *(pending)* |
+| `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.94 MBytes | [Download](Dataset/data_tfp.mat) | *(pending)* |
 
-Alternatively, you can clone this GitHub repository; the dataset appears under Dataset/. This repository also contains some scripts for load and visualization.
+> Checksums can be verified with `md5sum <file>` on Linux/macOS or `CertUtil -hashfile <file> MD5` on Windows.
+
+Alternatively, you can clone this GitHub repository; the dataset appears under `Dataset/`. This repository also contains some scripts for load and visualization.
+
+### Recorded variables
+
+| Column | Variable | Unit | Description |
+|:-|:-|:-|:-|
+| 1 | `Time` | s | Elapsed time since the beginning of the record |
+| 2 | `TempIn` | °C | Inlet water temperature (NTC thermistor, non-invasive) |
+| 3 | `TempOut` | °C | Outlet water temperature (NTC thermistor, non-invasive) |
+| 4 | `WaterFlow` | L/min | Outlet water flow (Hall-effect sensor) |
+| 5 | `TempReal` | °C | Reference outlet temperature (Type K immersion thermocouple) |
 
 ## Database
-The database is presented in two formats. The first format uses MATLAB software, providing one .mat files referring  to the thermal-fluid-predictor. The organization of the .mat files is illustrated in , where the values and number of samples change depending on which file is selected.
+
+The database is presented in two formats. The first format uses MATLAB software, providing one `.mat` file referring to the thermal-fluid-predictor. The organization of the `.mat` file is illustrated in `Figure 11`, where the values and number of samples change depending on which file is selected.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -240,19 +251,73 @@ The database is presented in two formats. The first format uses MATLAB software,
 **Figure 11.** *Schematic representation of the data organized for MATLAB file.*
 </div>
 
-The database was organized into folders, as depicted in `Figure 11`. Each folder includes the acquired measurements in files.
+The second format is a set of CSV files organized into folders, one folder per operating state, available in `Raw_Signals_tfp_Folders.zip`. Each folder includes the acquired measurements in individual files following the naming convention described above.
 
-
-In addition to the dataset, scripts to load and read the data are provided for MATLAB, Python, R, and C
+In addition to the dataset, scripts to load and read the data are provided for MATLAB, Python, R, and C.
 
 ## Loading data
-Multiple scripts were created to efficiently load the dataset. These scripts facilitate the loading of both raw and processed data, enabling work at different stages of analysis. The scripts have been developed in MatLab, Python, R, and C.
 
-#### MatLab
+Multiple scripts were created to efficiently load the dataset. These scripts facilitate the loading of both raw and processed data, enabling work at different stages of analysis. The scripts have been developed in MATLAB, Python, R, and C.
+
+#### MATLAB
+
+```matlab
+% Load the full dataset
+load('Dataset/data_tfp.mat');
+
+% Load a single record
+T = readtable('Dataset/Raw_Signals_tfp/C01_R01_SH_FZ_GL.csv');
+
+plot(T.Time, [T.TempIn, T.TempOut, T.TempReal]);
+xlabel('Time (s)'); ylabel('Temperature (\circC)');
+legend('TempIn','TempOut','TempReal');
+```
 
 #### Python
 
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('Dataset/Raw_Signals_tfp/C01_R01_SH_FZ_GL.csv')
+
+df.plot(x='Time', y=['TempIn', 'TempOut', 'TempReal'])
+plt.xlabel('Time (s)')
+plt.ylabel('Temperature (°C)')
+plt.show()
+```
+
 #### R
+
+```r
+df <- read.csv("Dataset/Raw_Signals_tfp/C01_R01_SH_FZ_GL.csv")
+
+matplot(df$Time, df[, c("TempIn", "TempOut", "TempReal")],
+        type = "l", lty = 1,
+        xlab = "Time (s)", ylab = "Temperature (C)")
+legend("topleft", c("TempIn", "TempOut", "TempReal"),
+       lty = 1, col = 1:3)
+```
+
+#### C
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    FILE *f = fopen("Dataset/Raw_Signals_tfp/C01_R01_SH_FZ_GL.csv", "r");
+    char line[256];
+    float t, tin, tout, flow, treal;
+
+    fgets(line, sizeof(line), f);            /* skip header */
+    while (fgets(line, sizeof(line), f)) {
+        sscanf(line, "%f,%f,%f,%f,%f", &t, &tin, &tout, &flow, &treal);
+        printf("%6.2f  %6.2f\n", t, treal);
+    }
+    fclose(f);
+    return 0;
+}
+```
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -272,28 +337,82 @@ Multiple scripts were created to efficiently load the dataset. These scripts fac
 
 ## Implementations
 
+The `models/` directory contains the scripts used to train and evaluate the soft-sensor models reported in the associated publication.
+
+| Path | Description |
+|:-|:-|
+| `models/train_knn.m` | Distance-weighted KNN regression, one model per operating state |
+| `models/train_dl.m` | LSTM, GRU, and Bi-LSTM baselines |
+| `models/group_kfold.m` | Record-level 5-fold partitioning |
+| `models/ema_filter.m` | First-order exponential moving average filter |
+
+> **Validation protocol.** Cross-validation folds are formed at the **record level**, not at the sample level: the 120 acquisition files are split into five disjoint groups, so that all 1,200 samples of a given record belong exclusively to either the training or the validation partition. This prevents temporally adjacent samples (200 ms apart, and therefore strongly correlated) from appearing in both partitions, which would otherwise bias local estimators such as KNN. All reported metrics are computed on held-out validation records.
+
 ## Benchmark
+
 Feel free to submit your benchmark by creating a new issue, and we'll display your results here. Before proceeding, ensure your benchmark doesn't already exist on this list. For further information, refer to our contributor guidelines.
+
+| Model | State | MAE (°C) | RMSE (°C) | R² | Within ±1 °C (%) | Source |
+|:-|:-|:-|:-|:-|:-|:-|
+| KNN (weighted) | Heating | 0.231 | 0.752 | 0.947 | 93.70 | This work |
+| KNN (weighted) | Steady | 0.093 | 0.233 | 0.994 | 99.10 | This work |
+| KNN (weighted) | Cooling | 0.144 | 0.321 | 0.996 | 97.14 | This work |
+| KNN (weighted) | All States | 0.273 | 0.842 | 0.970 | 92.65 | This work |
 
 ## Publications
 
 Publications from the scientific community that use the TFP dataset:
 
+*A journal article describing this dataset is currently under review. This list will be updated upon acceptance.*
 
 ## Contact
 
 [Dr. M.-A. Ibarra-Manzano](mailto:ibarram@ugto.mx?subject=[GitHub]%20TFP%20dataset) - [ORCID: 0000-0003-4317-0248](https://orcid.org/0000-0003-4317-0248) - [SCOPUS: 15837259000](https://www.scopus.com/authid/detail.uri?authorId=15837259000)
 
-[M.I. M.-A. Armenta-Loredo](mailto:ma.armentaloredo@ugto.mx?subject=[GitHub]%20TFP%20dataset) - [ORCID: 0009-0006-7338-6065](https://orcid.org/0009-0006-7338-6065) - 
+[M.I. M.-A. Armenta-Loredo](mailto:ma.armentaloredo@ugto.mx?subject=[GitHub]%20TFP%20dataset) - [ORCID: 0009-0006-7338-6065](https://orcid.org/0009-0006-7338-6065)
 
-Project Link: [thermal-fluid-predictor (TFP)](https://github.com/ibarram/ITSC)
+Project Link: [thermal-fluid-predictor (TFP)](https://github.com/ibarram/thermal-fluid-predictor)
 
 ## Citing thermal-fluid-predictor database
 
-If you use TFP database in a scientific publication, we would appreciate references to the following paper:
+If you use the TFP database in a scientific publication, we would appreciate references to the following work. A journal article is currently under review; citation details will be added upon acceptance. In the meantime, please cite the repository:
 
+BibTeX entry:
+
+```bibtex
+@misc{tfp2026,
+  author    = {Ibarra-Manzano, Mario-Alberto and
+               Armenta-Loredo, Miguel-Angel and
+               Almanza-Ojeda, Dora-Luz},
+  title     = {Thermal Fluid Predictor {(TFP)} Dataset},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.XXXXXXX},
+  url       = {https://github.com/ibarram/thermal-fluid-predictor}
+}
+```
 
 Biblatex entry:
 
+```bibtex
+@dataset{tfp2026,
+  author    = {Ibarra-Manzano, Mario-Alberto and
+               Armenta-Loredo, Miguel-Angel and
+               Almanza-Ojeda, Dora-Luz},
+  title     = {Thermal Fluid Predictor {(TFP)} Dataset},
+  date      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.XXXXXXX},
+  url       = {https://github.com/ibarram/thermal-fluid-predictor},
+  version   = {1.0.0}
+}
+```
 
 ## License
+
+This repository uses two licenses:
+
+- **Dataset** (`Dataset/`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt the data for any purpose, provided appropriate credit is given.
+- **Source code** (`src/`, `models/`, loading scripts): [MIT License](https://opensource.org/licenses/MIT).
+
+See [`LICENSE`](LICENSE) and [`LICENSE-DATA`](LICENSE-DATA) for the full terms.
