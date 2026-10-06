@@ -77,7 +77,7 @@ The data files were constructed from 12 realizable experimental combinations, ea
 | 11 | `C11_R01_SC_FL_GZ` | 1 | Cooling | Low | Zero | — | — |
 | 12 | `C12_R01_SC_FH_GZ` | 1 | Cooling | High | Zero | — | — |
 
-**Table 1.** *Combinations used to generate the data files. Each combination was repeated 10 times, yielding 120 records in total. Inlet temperature applies only to the Heating state; set temperature only to the Steady state.*
+**Table 1.** *Combinations used to generate the data files. Each combination was repeated 10 times, yielding 120 records in total. Inlet temperature applies only to the Heating state; set temperature applies only to the Steady state.*
 
 Therefore, the total number of data files is 12 unique files. But we have repetitions files to generate more dataset information, 10 files per process, resulting in a total of 120 files.
 
