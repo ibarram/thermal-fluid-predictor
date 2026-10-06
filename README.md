@@ -79,7 +79,7 @@ The data files were constructed from 12 realizable experimental combinations, ea
 
 **Table 1.** *Combinations used to generate the data files. Each combination was repeated 10 times, yielding 120 records in total. Inlet temperature applies only to the Heating state; set temperature applies only to the Steady state.*
 
-Therefore, the total number of data files is 12 unique files. But we have repetitions files to generate more dataset information, 10 files per process, resulting in a total of 120 files.
+Therefore, there are 12 unique experimental combinations. Each combination was repeated 10 times to generate additional experimental records, resulting in a total of 120 data files.
 
 ## Testbench
 
