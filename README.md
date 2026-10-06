@@ -54,15 +54,13 @@
 
 ## Abstract
 
-Thermal Fluid Predictor is a cross-platform project for modeling and predicting fluid temperature behavior in real-time. The repository includes implementations in Python, MATLAB, C, and R, tailored for integration into energy-constrained embedded systems such as gas water heaters. It provides curated datasets, trained models, and system diagrams to support reproducible development, simulation, and deployment.
+Thermal Fluid Predictor is a cross-platform project for modeling and predicting fluid temperature behavior in real time. The repository includes implementations in Python, MATLAB, C, and R, together with datasets, trained models, and system documentation to support reproducible development, simulation, and deployment in energy-constrained embedded systems such as gas-based water heaters.
 
-The dataset contains measurements of five variables obtained from the Rapid Recovery Water Heater. The sampling methodology is based on the **"water state process."**
+The dataset contains measurements of five variables acquired from an instrumented rapid-recovery water heater operating with LP gas. The data collection covers three thermal regimes: Heating, Steady, and Cooling, under systematically varied water-flow and gas-flow conditions.
 
-Each process has a total sampling duration of 4 minutes.
+Each record has a sampling duration of 4 minutes, with samples recorded every 200 ms (5 Hz), resulting in 1,200 samples per record. The complete dataset contains 120 records and 144,000 samples.
 
-Samples are recorded every 200 *ms*, that is, at a sampling frequency of 5 *Hz*, which means that in each 4-minute phase we have 1,200 samples.
-
-The construction of the data files was based on the following `Table 1`, which includes 12 unique, non-repeating combinations.
+The data files were constructed from 12 realizable experimental combinations, each repeated 10 times under nominally identical conditions. The sampling methodology is based on the "water state process." These experimental combinations are summarized in the following `Table 1`.
 
 | # | File Name | Rep. | Water State | Water Flow | Gas Flow | Inlet Temp. (°C) | Set Temp. (°C) |
 |:-:|:-|:-:|:-|:-|:-|:-:|:-:|
