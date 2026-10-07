@@ -254,13 +254,17 @@ You can download the interface of Labview with the next link.
 
 ## Get the Data
 
-You can use direct links to download the dataset. The data is stored in the csv and mat formats.
+The Thermal Fluid Predictor (TFP) dataset contains 144,000 time-stamped measurements acquired from an instrumented rapid-recovery water heater operating with LP gas. It is intended to support the development and benchmarking of soft sensors that estimate outlet water temperature from externally measured signals.
+
+Each sample pairs three externally measured signals — inlet temperature, outlet pipe-surface temperature, and water flow — with a reference outlet temperature measured by a Type K immersion thermocouple, which serves as the supervised target. The acquisition covers three thermal regimes: Heating, Steady, and Cooling, under systematically varied water-flow and gas-flow conditions. The sampling methodology is based on the "water state process."
+
+You can use direct links to download the dataset. The data is stored in the *.csv and *.mat formats.
 
 |Name|Description|Samples|Size|Link|MD5 Checksum|
 |:-|:-|:-|:-|:-|:-|
-| `Raw_Signals_tfp.zip` | Raw data in CSV format | [144,000x5] | 1.2 MBytes | [Download](Dataset/Raw_Signals_tfp.zip) | *(pending)* |
-| `Raw_Signals_tfp_Folders.zip` | Raw data in CSV format arranged in folders | [144,000x5] | 1.21 MBytes | [Download](Dataset/Raw_Signals_tfp_Folders.zip) | *(pending)* |
-| `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.94 MBytes | [Download](Dataset/data_tfp.mat) | *(pending)* |
+| `Raw_Signals_tfp.zip` | Raw data in CSV format | [144,000x5] | 1.2 MBytes | [Download](Dataset/Raw_Signals_tfp.zip) | 1CDAAE76EAE1954D7DA9D290405EC205 |
+| `Raw_Signals_tfp_Folders.zip` | Raw data in CSV format arranged in folders | [144,000x5] | 1.21 MBytes | [Download](Dataset/Raw_Signals_tfp_Folders.zip) | E099F1A6EE86455B9E333635EEDFBA23 |
+| `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.94 MBytes | [Download](Dataset/data_tfp.mat) | BEBB9B27B51D52AC818470AB325CBC25 |
 
 > Checksums can be verified with `md5sum <file>` on Linux/macOS or `CertUtil -hashfile <file> MD5` on Windows.
 
