@@ -135,12 +135,11 @@ In the first case (**SH**), water is actively heated, so both the LP gas supply 
 **Figure 3.** *Obtain Water Temperature State*
 </div>
 
-In the third step, shown in `Figure 4`, the water flow rate circulating through the pipe is assigned (**F"Y"**).
-This variable does not have a fixed value—it entirely depends on the water consumption or demand from the user. Therefore, only estimated values were defined by our research team:
+In the third step, shown in `Figure 4`, the water flow rate circulating through the pipe is assigned (`FY`). This variable does not have a fixed value and depends entirely on the water consumption or demand from the user. Therefore, only approximate flow ranges were defined by the research team:
 
-- Water Flow "Zero" (**FZ**): Flow rate should be zero, meaning the outlet valve of the water heater is completely closed, while the inlet valve remains open.
-- Water Flow "Low" (**FL**): Flow rate is between 4–7 *L/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was set at a halfway position.
-- Water Flow "High" (**FH**): Flow rate is between 12–15 *L/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was fully opened.
+- Water Flow "Zero" (**FZ**): The flow rate should be zero, meaning that the outlet valve of the water heater is completely closed while the inlet valve remains open.
+- Water Flow "Low" (**FL**): The flow rate is between 4–7 *L/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was set to a halfway position.
+- Water Flow "High" (**FH**): The flow rate is between 12–15 *L/min*. Both the inlet and outlet valves are open. For this experiment, the outlet valve was fully open.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -150,8 +149,8 @@ This variable does not have a fixed value—it entirely depends on the water con
 **Figure 4.** *Obtain Water Flow.*
 </div>
 
-In the final step, shown in `Figure 5`, the output value for the LP gas valve opening is assigned (**G"V"**).
-This variable is not measured in terms of pressure, but rather by the amount of electrical current supplied to the solenoid valve to control its opening. This behavior is illustrated in `Figure 6`, which shows the functional characteristic curve. The valve operation is defined as follows:
+In the final step, shown in `Figure 5`, the LP gas valve opening level is assigned (`GV`).
+This variable is not measured directly in terms of gas pressure or flow rate; instead, the valve opening is controlled by the electrical current supplied to the solenoid valve. This relationship is illustrated in `Figure 6`, which shows the corresponding functional characteristic curve. The valve operation is defined as follows:
 
 - Gas Flow "Zero" (**GZ**): Applied current = 0 *mA*; the valve remains fully closed.
 - Gas Flow "Low" (**GL**): Applied current = 10 *mA*; the valve opens to a minimal position.
@@ -174,16 +173,16 @@ This variable is not measured in terms of pressure, but rather by the amount of 
 **Figure 6.** *Electrovalve Characteristics.*
 </div>
 
-For example to generate a file. We will need to assign the following parameters using `Table 1` as a reference:
+For example, to generate a file, we need to assign the following parameters using `Table 1` as a reference:
 
-- **C01_R01**: First Sample then *C01*, and first repetition then *R01*.
-- **SH**: The water will begin heating, so we select the Heating option in State of the interface.
-- **FZ**: The water flow will be zero for our first case; therefore, the outlet valve will remain closed, and we set the Water Flow to Zero in the interface.
-- **GL**: The LP gas flow will be low, so we select the Low option in Gas Flow of the interface.
+- **C01_R01**: The first experimental combination is assigned **C01**, and the first repetition is assigned **R01**.
+- **SH**: The water will begin heating, so we select the **Heating** option in the State section of the interface.
+- **FZ**: The water flow will be zero for this case; therefore, the outlet valve remains closed, and we select **Zero** in the **Water Flow** section of the interface.
+- **GL**: The LP gas flow level will be low, so we select **Low** in the **Gas Flow** section of the interface.
 
-The final file name will be: **`C01_R01_SH_FZ_GL`**
+The final file name will be: `C01_R01_SH_FZ_GL`
 
-***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 7`, some elements in the "Gas Flow" section—such as the Zero condition—are crossed out, this is because water cannot be heated if there is no gas flow; therefore, it makes no sense to consider that option.
+***Note:** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 7`, some options in the **Gas Flow** section, such as the **Zero** condition, are crossed out. This is because water cannot be heated without gas flow; therefore, this option is not considered for the Heating state.
 
 ```mermaid
 flowchart TD
