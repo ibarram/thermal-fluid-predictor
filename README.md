@@ -60,7 +60,7 @@ The dataset contains measurements of five variables acquired from an instrumente
 
 Each record has a sampling duration of 4 minutes, with samples recorded every 200 ms (5 Hz), resulting in 1,200 samples per record. The complete dataset contains 120 records and 144,000 samples.
 
-The data files were constructed from 12 realizable experimental combinations, each repeated 10 times under nominally identical conditions. The sampling methodology is based on the "water state process." These experimental combinations are summarized in the following `Table 1`.
+The data files were constructed from 12 realizable experimental combinations, each repeated 10 times under nominally identical conditions. The sampling methodology is based on the **"water state process"**. These experimental combinations are summarized in the following `Table 1`.
 
 | # | File Name | Rep. | Water State | Water Flow | Gas Flow | Inlet Temp. (°C) | Set Temp. (°C) |
 |:-:|:-|:-:|:-|:-|:-|:-:|:-:|
