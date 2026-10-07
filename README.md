@@ -182,7 +182,7 @@ For example, to generate a file, we need to assign the following parameters usin
 
 The final file name will be: `C01_R01_SH_FZ_GL`
 
-***Note:** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 7`, some options in the **Gas Flow** section, such as the **Zero** condition, are crossed out. This is because water cannot be heated without gas flow; therefore, this option is not considered for the Heating state.
+***Note:*** Some considerations must be taken into account in certain cases. For example, as shown in `Figure 7`, some options in the **Gas Flow** section, such as the **Zero** condition, are crossed out. This is because water cannot be heated without gas flow; therefore, this option is not considered for the Heating state.
 
 ```mermaid
 flowchart TD
@@ -220,38 +220,38 @@ flowchart TD
     class F file
 ```
 
-**Figure 7.** *Example, how to select variables for each file part.*
+**Figure 7.** *Example of how to select variables for each part of the file name.*
 
-In this way, the 12 essential files of our process will be generated. Each file contains a total of 1,200 samples. That is, we will have 12 csv files, each with dimensions [1200x5], giving us a total of [12x1200x5]. If we consider that 10 repetitions are generated for each file, we will have [12x10] csv files. Combining this with the number of samples per file results in [12x10x1200x5] = [144,000x5] total samples.
+In this way, the 12 experimental combinations of our process are defined. Each file contains a total of 1,200 samples, with five variables per sample. Therefore, one experimental combination corresponds to 1,200 × 5 data values. Since each combination is repeated 10 times, the complete dataset consists of 12 × 10 = 120 CSV files. Considering the 1,200 samples and five variables in each file, the complete dataset contains 120 × 1,200 × 5 = 144,000 × 5 data values, corresponding to 144,000 samples with five variables each.
 
-If you need to use the LabVIEW interface along with the code used to load it onto the STM32 board, the download links are attached.
+If you need to use the LabVIEW interface together with the code used to program the STM32 board, the corresponding download links are provided below.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
     <img src="/doc/img/labviewinterface.png" alt="labviewinterface" width="600" height="600">
   </a>
 
-**Figure 8.** *Example view of interface from Labview.*
+**Figure 8.** *Example view of the LabVIEW interface.*
 </div>
 
-You can download the interface of Labview with the next link.
+You can download the LabVIEW interface using the following link.
 
 |Name|Description|Size|Link|
 |:-|:-|:-|:-|
-| `Data_HeaterSystem.zip` | Labview interface to generate the database  | 288 KBytes | [Download](src/Data_HeaterSystem.zip) |
+| `Data_HeaterSystem.zip` | LabVIEW interface used to configure the experiments and generate the dataset  | 288 KBytes | [Download](src/Data_HeaterSystem.zip) |
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
     <img src="/doc/img/STM32IDE.png" alt="STM32IDE" width="600" height="600">
   </a>
 
-**Figure 9.** *Platform of [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html#overview).*
+**Figure 9.** *[STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html#overview) development platform*
 </div>
 
 
 |Name|Description|Size|Link|
 |:-|:-|:-|:-|
-| `STM32_Code_tfp.zip` | STM32 Code  | 14.7 MBytes | [Download](src/STM32_Code_tfp.zip) |
+| `STM32_Code_tfp.zip` | STM32 firmware project for data acquisition  | 14.7 MBytes | [Download](src/STM32_Code_tfp.zip) |
 
 ## Get the Data
 
@@ -284,23 +284,23 @@ Every CSV file has a one-line header and exactly 1,200 data rows, with five comm
 
 ## Database
 
-The database is presented in two formats. The first format uses MATLAB software, providing one `.mat` file referring to the thermal-fluid-predictor. The organization of the `.mat` file is illustrated in `Figure 10`, where the values and number of samples change depending on which file is selected.
+The database is provided in two formats. The first format uses MATLAB and consists of a single `.mat` file containing the dataset. The organization of the `.mat` file is illustrated in `Figure 10`, where the data values and number of samples vary depending on the selected file.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
     <img src="/doc/img/matfile.png" alt="matfile" width="600" height="600">
   </a>
 
-**Figure 10.** *Schematic representation of the data organized for MATLAB file.*
+**Figure 10.** *Schematic representation of the data organized in the MATLAB file.*
 </div>
 
-The second format is a set of CSV files organized into folders, one folder per operating state, available in `Raw_Signals_tfp_Folders.zip`. Each folder includes the acquired measurements in individual files following the naming convention described above.
+The second format consists of a set of CSV files organized into folders, with one folder for each experimental combination, available in `Raw_Signals_tfp_Folders.zip`. Each folder contains the acquired measurements in individual files following the naming convention described above.
 
-In addition to the dataset, scripts to load and read the data are provided for MATLAB, Python, R, and C.
+In addition to the dataset, scripts for loading and reading the data are provided for MATLAB, Python, R, and C.
 
 ## Loading data
 
-Multiple scripts were created to efficiently load the dataset. These scripts facilitate the loading of both raw and processed data, enabling work at different stages of analysis. The scripts have been developed in MATLAB, Python, R, and C.
+Multiple scripts are provided to load the dataset efficiently. These scripts allow users to work with both the complete dataset and individual records at different stages of analysis. Implementations are provided in MATLAB, Python, R, and C.
 
 #### MATLAB
 
@@ -384,8 +384,8 @@ The `models/` directory contains the scripts used to train and evaluate the soft
 
 | Path | Description |
 |:-|:-|
-| `models/train_knn.m` | Distance-weighted KNN regression, one model per operating state |
-| `models/train_dl.m` | LSTM, GRU, and Bi-LSTM baselines |
+| `models/train_knn.m` | KNN regression models evaluated for each operating state |
+| `models/train_dl.m` | GRU and Bi-LSTM baselines |
 | `models/group_kfold.m` | Record-level 5-fold partitioning |
 | `models/ema_filter.m` | First-order exponential moving average filter |
 
@@ -397,10 +397,10 @@ Feel free to submit your benchmark by creating a new issue, and we'll display yo
 
 | Model | State | MAE (°C) | RMSE (°C) | R² | Within ±1 °C (%) | Source |
 |:-|:-|:-|:-|:-|:-|:-|
-| KNN (weighted) | Heating | 0.231 | 0.752 | 0.947 | 93.70 | This work |
-| KNN (weighted) | Steady | 0.093 | 0.233 | 0.994 | 99.10 | This work |
-| KNN (weighted) | Cooling | 0.144 | 0.321 | 0.996 | 97.14 | This work |
-| KNN (weighted) | All States | 0.273 | 0.842 | 0.970 | 92.65 | This work |
+| KNN | Heating | 0.231 | 0.752 | 0.947 | 93.70 | This work |
+| KNN | Steady | 0.098 | 0.288 | 0.990 | 98.62 | This work |
+| KNN | Cooling | 0.130 | 0.387 | 0.994 | 96.03 | This work |
+| KNN | All States | 0.273 | 0.842 | 0.970 | 92.65 | This work |
 
 ## Publications
 
