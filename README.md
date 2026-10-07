@@ -262,13 +262,13 @@ You can use direct links to download the dataset. The data is stored in the *.cs
 
 |Name|Description|Samples|Size|Link|MD5 Checksum|
 |:-|:-|:-|:-|:-|:-|
-| `Raw_Signals_tfp.zip` | Raw data in CSV format | [144,000x5] | 1.2 MBytes | [Download](Dataset/Raw_Signals_tfp.zip) | 1CDAAE76EAE1954D7DA9D290405EC205 |
-| `Raw_Signals_tfp_Folders.zip` | Raw data in CSV format arranged in folders | [144,000x5] | 1.21 MBytes | [Download](Dataset/Raw_Signals_tfp_Folders.zip) | E099F1A6EE86455B9E333635EEDFBA23 |
-| `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.94 MBytes | [Download](Dataset/data_tfp.mat) | BEBB9B27B51D52AC818470AB325CBC25 |
+| `Raw_Signals_tfp.zip` | Raw data in CSV format | [144,000x5] | 1.2 MBytes | [Download](Dataset/Raw_Signals_tfp.zip) | 1cdaae76eae1954d7da9d290405ec205 |
+| `Raw_Signals_tfp_Folders.zip` | Raw data in CSV format arranged in folders | [144,000x5] | 1.21 MBytes | [Download](Dataset/Raw_Signals_tfp_Folders.zip) | e099f1a6ee86455b9e333635eedfba23 |
+| `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.94 MBytes | [Download](Dataset/data_tfp.mat) | bebb9b27b51d52ac818470ab325cbc25 |
 
-> Checksums can be verified with `md5sum <file>` on Linux/macOS or `CertUtil -hashfile <file> MD5` on Windows.
+> Checksums can be verified with md5sum <file> on Linux/macOS or Get-FileHash "<file>" -Algorithm MD5 in Windows PowerShell.
 
-Alternatively, you can clone this GitHub repository; the dataset appears under `Dataset/`. This repository also contains some scripts for load and visualization.
+Alternatively, you can clone the GitHub repository, where the dataset is available under Dataset/. The repository also includes scripts for data loading and visualization.
 
 ### Recorded variables
 
