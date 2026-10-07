@@ -103,13 +103,11 @@ The second device is the NI USB-TC01 module, which enables the measurement of th
 
 As mentioned earlier, the data acquisition is structured based on the "water state process" concept to generate the corresponding files. The naming convention for the files follows this structure:
 
-As mentioned earlier, the data acquisition is structured based on the "water process" concept to generate the corresponding files. The naming convention for the files follows this structure: 
-
-`Cnn_Rrr_Sw_Fy_Gv.csv`
+`CXX_RZZ_SW_FY_GV.csv`
 
 which is explained in detail in the following figures.
 
-As shown in `Figure 2`, the first part of the filename indicates the experimental combination and its repetition (Cnn_Rrr). In total, there are 12 unique experimental combinations, each of which was repeated 10 times for this dataset, resulting in 120 records. However, additional repetitions can be generated if needed.
+As shown in `Figure 2`, the first part of the filename indicates the experimental combination and its repetition (`CXX_RZZ`). In total, there are 12 unique experimental combinations, each of which was repeated 10 times for this dataset, resulting in 120 records. However, additional repetitions can be generated if needed.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
@@ -119,17 +117,15 @@ As shown in `Figure 2`, the first part of the filename indicates the experimenta
 **Figure 2.** *Obtain Combination number and Repetition number.*
 </div>
 
-In the second step, as shown in `Figure 3`, the "water process" is assigned (**S"W"**):
+In the second step, as shown in `Figure 3`, the **water temperature state** is assigned (`SW`):
 
 - Water is being heated (**SH – State Heating**).
 - Water temperature is being maintained at a set point (**SS – State Steady**).
 - Water is being cooled down (**SC – State Cooling**).
 
-For each case, the sampling duration is 4 minutes with one sample taken every 200 *ms*, corresponding to a sampling frequency of 5 *Hz* and a total of 1,200 samples per full cycle.
+For each case, the sampling duration is 4 minutes, with one sample taken every 200 ms, corresponding to a sampling frequency of 5 Hz and a total of 1,200 samples per record.
 
-In the first case (SH), water is actively heated, so both the LP gas output and the ignition spark are activated to produce a flame.
-In the second case (SS), a SET temperature is defined and a basic control method is applied, which simply turns the gas source on and off to maintain a relatively stable (though not precisely controlled) temperature, only for experimental purposes.
-In the final case (SC), the system enters the cooling phase, where both the LP gas output and ignition spark are turned off so that the flame is no longer produced.
+In the first case (**SH**), water is actively heated, so both the LP gas supply and the ignition spark are activated to produce a flame. In the second case (**SS**), a set temperature is defined and a basic control method is applied, which simply turns the gas supply on and off to maintain a relatively stable, though not precisely controlled, temperature for experimental purposes. In the final case (**SC**), the system enters the cooling phase, where both the LP gas supply and the ignition spark are turned off, so that no flame is produced.
 
 <div align="center">
   <a href="https://github.com/ibarram/thermal-fluid-predictor">
