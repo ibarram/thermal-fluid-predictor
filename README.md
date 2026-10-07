@@ -259,7 +259,7 @@ The Thermal Fluid Predictor (TFP) dataset contains 144,000 time-stamped measurem
 
 Each sample pairs three externally measured signals — inlet temperature, outlet pipe-surface temperature, and water flow — with a reference outlet temperature measured by a Type K immersion thermocouple, which serves as the supervised target. The acquisition covers three thermal regimes: Heating, Steady, and Cooling, under systematically varied water-flow and gas-flow conditions. The sampling methodology is based on the "water state process."
 
-You can use direct links to download the dataset. The data is stored in the *.csv and *.mat formats.
+You can use direct links to download the dataset. The data is stored in the ´*.csv´ and ´*.mat´ formats.
 
 |Name|Description|Samples|Size|Link|MD5 Checksum|
 |:-|:-|:-|:-|:-|:-|
