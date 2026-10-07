@@ -271,14 +271,15 @@ You can use direct links to download the dataset. The data is stored in the *.cs
 Alternatively, you can clone the GitHub repository, where the dataset is available under Dataset/. The repository also includes scripts for data loading and visualization.
 
 ### Recorded variables
+Every CSV file has a one-line header and exactly 1,200 data rows, with five comma-separated columns in this order. There are no missing values anywhere in the dataset.
 
 | Column | Variable | Unit | Description |
 |:-|:-|:-|:-|
 | 1 | `Time` | s | Elapsed time since the beginning of the record |
-| 2 | `TempIn` | °C | Inlet water temperature (NTC thermistor, non-invasive) |
-| 3 | `TempOut` | °C | Outlet water temperature (NTC thermistor, non-invasive) |
+| 2 | `TempIn` | °C | Inlet pipe-surface temperature (NTC thermistor) |
+| 3 | `TempOut` | °C | Outlet pipe-surface temperature (NTC thermistor) |
 | 4 | `WaterFlow` | L/min | Outlet water flow (Hall-effect sensor) |
-| 5 | `TempReal` | °C | Reference outlet temperature (Type K immersion thermocouple) |
+| 5 | `TempReal` | °C | Reference outlet water temperature (Type K thermocouple) — supervised target |
 
 ## Database
 
