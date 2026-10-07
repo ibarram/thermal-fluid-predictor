@@ -245,7 +245,7 @@ You can download the LabVIEW interface using the following link.
     <img src="/doc/img/STM32IDE.png" alt="STM32IDE" width="600" height="600">
   </a>
 
-**Figure 9.** *[STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html#overview) development platform*
+**Figure 9.** *[STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html#overview) development platform.*
 </div>
 
 
