@@ -280,7 +280,7 @@ Every CSV file has a one-line header and exactly 1,200 data rows, with five comm
 | 2 | `TempIn` | °C | Inlet pipe-surface temperature (NTC thermistor) |
 | 3 | `TempOut` | °C | Outlet pipe-surface temperature (NTC thermistor) |
 | 4 | `WaterFlow` | L/min | Outlet water flow (Hall-effect sensor) |
-| 5 | `TempReal` | °C | Reference outlet water temperature (Type K thermocouple) — supervised target |
+| 5 | `TempReal` | °C | Reference outlet water temperature (Type K thermocouple) — **supervised target** |
 
 ## Database
 
