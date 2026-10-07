@@ -266,7 +266,7 @@ You can use direct links to download the dataset. The data is stored in the *.cs
 | `Raw_Signals_tfp_Folders.zip` | Raw data in CSV format arranged in folders | [144,000x5] | 1.21 MBytes | [Download](Dataset/Raw_Signals_tfp_Folders.zip) | e099f1a6ee86455b9e333635eedfba23 |
 | `data_tfp.mat` | Raw data in mat format | [144,000x5] | 1.94 MBytes | [Download](Dataset/data_tfp.mat) | bebb9b27b51d52ac818470ab325cbc25 |
 
-> Checksums can be verified with md5sum <file> on Linux/macOS or Get-FileHash "<file>" -Algorithm MD5 in Windows PowerShell.
+> Checksums can be verified with `md5sum filename` on Linux/macOS or `Get-FileHash "filename" -Algorithm MD5` in Windows PowerShell.
 
 Alternatively, you can clone the GitHub repository, where the dataset is available under Dataset/. The repository also includes scripts for data loading and visualization.
 
