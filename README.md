@@ -410,17 +410,17 @@ Publications from the scientific community that use the TFP dataset:
 
 ## Contact
 
-[Dr. M.-A. Ibarra-Manzano](mailto:ibarram@ugto.mx?subject=[GitHub]%20TFP%20dataset) - [ORCID: 0000-0003-4317-0248](https://orcid.org/0000-0003-4317-0248) - [SCOPUS: 15837259000](https://www.scopus.com/authid/detail.uri?authorId=15837259000)
+<!-- [Dr. M.-A. Ibarra-Manzano](mailto:ibarram@ugto.mx?subject=[GitHub]%20TFP%20dataset) - [ORCID: 0000-0003-4317-0248](https://orcid.org/0000-0003-4317-0248) - [SCOPUS: 15837259000](https://www.scopus.com/authid/detail.uri?authorId=15837259000)
 
 [M.I. M.-A. Armenta-Loredo](mailto:ma.armentaloredo@ugto.mx?subject=[GitHub]%20TFP%20dataset) - [ORCID: 0009-0006-7338-6065](https://orcid.org/0009-0006-7338-6065)
 
-Project Link: [thermal-fluid-predictor (TFP)](https://github.com/ibarram/thermal-fluid-predictor)
+Project Link: [thermal-fluid-predictor (TFP)](https://github.com/ibarram/thermal-fluid-predictor) -->
 
 ## Citing thermal-fluid-predictor database
 
 If you use the TFP database in a scientific publication, we would appreciate references to the following work. A journal article is currently under review; citation details will be added upon acceptance. In the meantime, please cite the repository:
 
-BibTeX entry:
+<!-- BibTeX entry:
 
 ```bibtex
 @misc{tfp2026,
@@ -450,7 +450,7 @@ Biblatex entry:
   version   = {1.0.0}
 }
 ```
-
+-->
 ## License
 
 This repository uses two licenses:
